@@ -7,7 +7,7 @@ description: Creates specs before coding. Use when starting a new project, featu
 
 ## Overview
 
-Write a structured specification before committed feature implementation. The spec is the shared source of truth between you and the human engineer — it defines what we're building, why, and how we'll know it's done. Explicitly exploratory code uses the agreed bounded question and protocol in `feasibility-experiment` or `comparative-experiment`; it does not silently become approved production implementation.
+Write a structured specification before writing any code. The spec is the shared source of truth between you and the human engineer — it defines what we're building, why, and how we'll know it's done. Code without a spec is guessing.
 
 ## When to Use
 
@@ -18,8 +18,6 @@ Write a structured specification before committed feature implementation. The sp
 - The task would take more than 30 minutes to implement
 
 **When NOT to use:** Single-line fixes, typo corrections, or changes where requirements are unambiguous and self-contained.
-
-For an explicitly requested pre-prototype experiment, follow its experiment skill first. For understanding an existing prototype before specifying improvements, use `elucidate`. Return here when the design is ready to become an approved implementation contract. Link the architecture guide, code sketch and UX references instead of copying their contents into another source of truth.
 
 ## The Gated Workflow
 

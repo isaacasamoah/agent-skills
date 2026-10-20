@@ -31,7 +31,7 @@
       "id": 1,
       "kind": "execution",
       "prompt": "Assess the planned comparison using protocol.md and results.json. Produce report.html and a batch-ready confirmation protocol. Use only these local inputs; do not call a model or collect new trials. Explain what changed in behavior and understanding, what is not comparable, and whether the winner claim is justified.",
-      "expected_output": "A comparison that separates candidate recovery from downstream quality, rejects a confounded run and selection-set generalization, and defines independent confirmation with complete worker records.",
+      "expected_output": "A comparison that separates candidate recovery from downstream quality, rejects a confounded run and selection-set generalization, and defines independent confirmation with complete trial records.",
       "files": [
         "comparative-experiment"
       ],
@@ -40,7 +40,7 @@
         "The variant whose evaluator and input set changed is flagged as non-comparable, without rewriting or dropping its raw result",
         "The three pairs are identified as a small constructed selection set rather than population-level evidence",
         "The report does not claim a statistically established winner from these observations",
-        "The confirmation protocol fixes data, evaluator, budgets and primary outcome, reserves new confirmation units, and gives each worker a unique output identity",
+        "The confirmation protocol fixes data, evaluator, budgets and primary outcome, reserves new confirmation units, and gives each trial a unique output identity",
         "No model requests or new trials are run"
       ]
     }

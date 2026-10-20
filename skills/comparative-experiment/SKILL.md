@@ -29,7 +29,7 @@ Select research tools by the question: scholarly search for papers, citation met
 
 ### 2. Agree the hypothesis and comparison protocol
 
-Write an explanation and a discriminating prediction:
+Write an explanation and a discriminating prediction. Template:
 
 > We think X accounts for observation Y because of evidence Z. We will compare A with B. If X is right, we expect this outcome; this other outcome would count against it.
 
@@ -41,21 +41,25 @@ Use [the experiment protocol](../../references/experiment-protocol.md) as the si
 - A repeat, paired or blocked design appropriate to variability; randomize order when order could bias the result.
 - Budget, stopping rule and an untouched confirmation set or repeat when selecting among many candidates.
 
-Choose metrics at the boundary of the claim. Candidate retrieval, relationship classification, notification usefulness and improvement in the final work are different outcomes. Measure the relevant stages separately; do not promote an upstream gain into a downstream benefit.
+Choose metrics at the boundary of the claim. Measure intermediate stages and the final outcome separately; an improvement in one stage does not establish an improvement in the whole system.
+
+**Example: a knowledge-sharing pipeline.** Candidate retrieval, relationship classification, notification usefulness and improvement in the final work are different outcomes. Finding more relevant candidates does not by itself establish that the resulting notifications help anyone.
 
 ### 3. Prepare independently runnable trials
 
-Give each trial the shared frozen protocol and an explicit variant, input set, environment, seed where meaningful, resource budget and unique output location. The record must be sufficient without earlier conversation or "same settings as before".
+Record each trial's protocol revision, variant, input set, environment, seed where meaningful, resource budget and unique output location. The record must be sufficient without earlier conversation or "same settings as before".
 
-Partition code and outputs so workers cannot overwrite each other or change the shared evaluator. Shared desktops, GPUs, caches, provider quotas and databases can interfere even when code worktrees are separate. Schedule or isolate those resources; record concurrency when it affects the measurement.
+Keep the shared evaluator and source data fixed. Identify conditions that could couple the trials and account for them in the comparison.
 
-Use the available orchestration mechanism only when useful and authorized. This skill defines trial assignments and aggregation, not a scheduler or a mandatory agent fleet. A sequential run of the same protocol is valid.
+**Example: shared hardware.** Two benchmarks using one GPU may compete for resources. Separate code directories do not make their timing measurements independent.
 
 ### 4. Run, inspect and compare
 
-Record all attempts, including failures, exclusions, neutral results and discarded variants. Check actual outputs, not worker summaries. Use the agreed controls and costs. A failed run is a failed run, not a zero-quality measurement unless that treatment was defined beforehand.
+Record all attempts, including failures, exclusions, neutral results and discarded variants. Check actual outputs against summaries. Use the agreed controls and costs. A failed run is a failed run, not a zero-quality measurement unless that treatment was defined beforehand.
 
-Compare matching units and conditions. Report sample sizes, observed effects, variability and uncertainty. Do not treat multiple messages from one session as independent repetitions without justification. If statistical inference is appropriate, use a suitable method and state its assumptions; do not manufacture significance from a tiny or dependent sample.
+Compare matching units and conditions. Report sample sizes, observed effects, variability and uncertainty. Identify dependencies between observations before treating them as independent repetitions. If statistical inference is appropriate, use a suitable method and state its assumptions; do not manufacture significance from a tiny or dependent sample.
+
+**Example: transcript research.** Several messages from one conversation may share the same context and cannot automatically count as independent repetitions.
 
 Separate exploration from confirmation. After inspecting many variants, freeze the selected candidate and evaluate on the untouched confirmation data or independent repeat. A changed criterion starts a newly labelled comparison; it cannot rewrite the old result.
 
@@ -70,9 +74,9 @@ Use the protocol's result states. A tie, tradeoff, null result or inconclusive c
 | Rationalization | Reality |
 |---|---|
 | "We changed several things, but the score improved" | Attribute the combined result only to that combination; isolate effects before claiming a cause. |
-| "More retrieved pairs means better collaboration" | Recovery, judgment, delivery and useful action require different evidence. |
+| "An intermediate metric improved, so the whole system is better" | Each stage and the final outcome require evidence that measures that claim. |
 | "The best of ten must be better" | Selection can reward noise. Confirm the frozen choice independently. |
-| "Parallel workers make runs independent" | Shared resources and source data can still couple the observations. |
+| "Separate runs are independent" | Shared resources and source data can still couple the observations. |
 | "The unsuccessful runs are uninteresting" | They constrain explanations and prevent repeating dead ideas. |
 
 ## Red Flags
@@ -82,7 +86,7 @@ Use the protocol's result states. A tie, tradeoff, null result or inconclusive c
 - Evaluator or selection criteria changed to favor a candidate.
 - Tiny, synthetic or correlated samples described as general evidence.
 - A leaderboard without an explanation of the changed cases or practical tradeoffs.
-- Worker completion counts used as evidence that collaboration improved the product.
+- Completed trial counts used as evidence of improved outcomes.
 
 ## Verification
 

@@ -1,6 +1,6 @@
 ---
 name: interview-me
-description: Clarifies user intent and design requirements through a one-question-at-a-time interview. Use when an ask is underspecified, when reviewing a design brief, sketches or prototype for unresolved requirements, or when the user says "interview me", "grill me" or "stress-test my thinking". Not for a settled design that only needs implementation planning.
+description: Extracts what the user actually wants instead of what they think they should want. Achieves this through one-question-at-a-time interview until ~95% confidence about the underlying intent. Use when an ask is underspecified ("build me X" without "for whom" or "why now"), when the user explicitly invokes ("interview me", "grill me", "are we sure?", "stress-test my thinking"), or when you catch yourself silently filling in ambiguous requirements before any plan, spec, or code exists.
 ---
 
 # Interview Me
@@ -36,19 +36,6 @@ Apply this skill when:
 This skill needs a live, responsive user. **Do not invoke in non-interactive contexts** like CI pipelines, scheduled runs, `/loop`, or autonomous-loop. If you're in one of those and the ask is underspecified, flag that as a blocker for the user instead of guessing.
 
 ## The Process
-
-### Reviewing an existing design brief
-
-When the user brings a brief, drawings, flows or a prototype, begin from that material rather than restarting discovery. The purpose is to reduce uncertainty about the intended design before someone builds it.
-
-1. Read the supplied material and relevant project context. Inspect drawings as images, not filenames or extracted text alone. Identify the revision or artifact being discussed.
-2. Reflect the intended users, problem, journey and boundaries back in plain language. Separate the user's decisions from your interpretations. Preserve their terminology and the interaction details they chose.
-3. Keep a short requirements record in the project's existing design artifact. Mark each important point as agreed, proposed, a factual question to investigate, or a decision needing the user. Link visual examples instead of attempting to replace them with prose.
-4. Apply the interview below to unresolved decisions. Work through prerequisites before questions that depend on them. Ask one focused question at a time with a recommendation and its consequence; do not ask the user for facts available in the code or supplied evidence.
-5. Cover the normal journey, failure and recovery, relevant permissions, exact UX behavior, constraints and exclusions where they affect the design. For an uncertain capability, name the question a feasibility experiment must answer. Do not replace an unknown with an invented requirement.
-6. Restate the clarified design and identify the uncertainty still left for experiments or later design. Ask the user to confirm or correct it. Confirmation settles the requirements discussed; it does not certify feasibility or authorize a build.
-
-Use the same requirements record throughout. Do not create another specification or prescribe an implementation architecture here. Complete the confirmation and stopping steps below before handing off.
 
 ### Step 1: Hypothesize, with a confidence number
 

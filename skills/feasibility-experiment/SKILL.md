@@ -48,7 +48,7 @@ Agree a bounded scope, budget and stopping rule before running. If required acce
 
 Use an owned branch or isolated workspace and the project's existing tooling. Write only enough code to run the claim. Follow `test-driven-development` for new behavior that can be tested; those tests supplement the real-surface observation.
 
-Exercise the actual interface, service or device named in the claim. Trace the action to its effect. A command receipt, a visible window, an event and a completed agent task are separate observations; check the ones the claim requires.
+Exercise the actual interface, service or device named in the claim. Trace the action to its effect. Identify which observations establish the required outcome; an acknowledgement or intermediate state alone does not establish completion.
 
 Capture setup, exact revision, actions, outputs and relevant negative cases. Have the user try an interaction when its feel or behavior is part of the question. Do not infer an experience from a screenshot or state flag.
 
@@ -62,7 +62,7 @@ Offer the next discriminating test or a prototype path within the agreed budget.
 
 | Rationalization | Reality |
 |---|---|
-| "The prepared terminal proves docking works" | It proves that prepared path. Preserve the ordinary-terminal condition when that is the question. |
+| "It worked under prepared conditions, so the capability is proved" | It proves only those conditions. Preserve the conditions specified in the claim. |
 | "A minimal test can skip the native UI" | Only if the claim does not depend on that UI. Minimality does not remove the failing boundary. |
 | "The request was accepted, so the action worked" | Verify the actual effect and completion the claim requires. |
 | "The attempt failed, so the idea is impossible" | A failure may identify a broken setup, limited mechanism or missing evidence. |

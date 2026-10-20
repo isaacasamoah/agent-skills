@@ -13,10 +13,6 @@
       {
         "prompt": "Ask me one question at a time until you understand the feature",
         "top_k": 3
-      },
-      {
-        "prompt": "Interview me about my design brief and sketches to clarify unresolved requirements before building",
-        "top_k": 3
       }
     ],
     "negative": [
@@ -40,18 +36,6 @@
         "Questions are asked one at a time, not in batches",
         "The agent does not propose solutions before understanding the need",
         "The interview surfaces the underlying goal behind the stated ask"
-      ]
-    },
-    {
-      "id": 2,
-      "kind": "dialogue",
-      "prompt": "I have drawn a Voyager dock on an ordinary terminal. I want you to grill me on this design before we build. The brief says docking registers an existing terminal, and I want to choose whether voice starts automatically. Reflect what you understand and ask the next design question. Do not implement or choose my preference for me.",
-      "expected_output": "An existing-brief design interview that preserves the ordinary-terminal requirement and asks one unresolved decision with a reasoned recommendation.",
-      "expectations": [
-        "The agent reflects the supplied brief rather than restarting with generic project discovery",
-        "The next question targets an unresolved design decision, one at a time",
-        "An agent recommendation is labelled as a proposal rather than an already agreed requirement",
-        "The agent neither implements the feature nor claims feasibility from the design sketch"
       ]
     }
   ]

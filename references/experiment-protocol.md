@@ -1,6 +1,6 @@
 # Experiment protocol
 
-Shared by `feasibility-experiment` and `comparative-experiment`. Keep one authoritative experiment record; reports and worker assignments are views of it. Use the project's established record location and format. Do not copy private transcripts into a public repository.
+Shared by `feasibility-experiment` and `comparative-experiment`. Keep one authoritative experiment record; reports and trial summaries are views of it. Use the project's established record location and format. Do not copy private transcripts into a public repository.
 
 ## Before a run
 
@@ -31,7 +31,7 @@ For a small feasibility spike, omit comparison-only fields that do not apply and
 - Substitutions, deviations, resource contention, failed runs and exclusions.
 - Expected versus actual result and the claim it supports or weakens.
 
-Evidence is a pointer to an actual artifact or observation, not a worker's assurance. Preserve the raw result if a summary or derived judgment is later corrected. Keep secrets and unrelated private data out of records.
+Evidence is a pointer to an actual artifact or observation, not an assurance of success. Preserve the raw result if a summary or derived judgment is later corrected. Keep secrets and unrelated private data out of records.
 
 ## Result states
 
@@ -42,15 +42,13 @@ Evidence is a pointer to an actual artifact or observation, not a worker's assur
 | Inconclusive | The evidence cannot distinguish the relevant explanations |
 | Blocked | A required resource, access or condition prevented a valid attempt |
 
-A comparison can support a practical choice without establishing a universal causal explanation. An unsuccessful implementation does not establish impossibility. A transport or worker failure does not become evidence against the underlying idea unless the protocol makes that failure the outcome of interest.
+A comparison can support a practical choice without establishing a universal causal explanation. An unsuccessful implementation does not establish impossibility. A failure of the test setup does not become evidence against the underlying idea unless the protocol makes that failure the outcome of interest.
 
-## Concurrent runs
+## Trial integrity
 
-Each worker receives the same protocol revision plus its variant and assigned inputs. Give workers separate outputs and owned code locations. Keep the evaluator and shared inputs fixed. Coordinate shared desktop, GPU, database, cache, provider quota and port use.
+Each trial refers to the frozen protocol revision and identifies its variant and inputs. Keep the evaluator and shared inputs fixed, retain distinct outputs, and record any resource interference that could affect comparison.
 
-Record actual model, settings and environment when relevant; requested settings are not evidence of effective settings. Explain missing or non-comparable runs before aggregation. Never overwrite another trial's result to make the batch complete.
-
-The orchestration tool owns agent launch, messaging, permissions and lifecycle. This protocol owns experimental meaning and result shape. Do not implement a second orchestration service inside a skill.
+Record effective settings and environment; requested settings are not evidence of effective settings. Explain missing or non-comparable runs before aggregation. Never overwrite another trial's result to make the record complete.
 
 ## Close or resume
 

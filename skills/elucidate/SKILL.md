@@ -29,9 +29,11 @@ Identify the source snapshot and any running artifact separately. Record which o
 
 Map the components that own behavior, the data they own and the interfaces between them. Trace representative user journeys through UI, service, processes, storage and external dependencies as applicable. Follow failure, recovery, permission and lifecycle paths where they change the explanation.
 
-Read relevant source directly. Use targeted investigation for an uncertain subsystem; optional independent readers may divide a large system when available and authorized. Reconcile their claims against source before presenting them.
+Read relevant source directly. Investigate uncertain subsystems and check explanatory claims against source before presenting them.
 
-Define product and code vocabulary consistently. Distinguish records from live processes, requested effects from completed outcomes, and relationships that look similar but have different semantics. Use the project's real distinctions rather than imposing a generic architecture.
+Define product and code vocabulary consistently. Identify concepts that look similar but have different meanings in this project, and explain the distinction.
+
+**Example: an application that manages running processes.** A stored process record is different from a live process, and an accepted action request is different from its completed effect. Other projects need their own distinctions.
 
 ### 3. Build the architecture model
 
