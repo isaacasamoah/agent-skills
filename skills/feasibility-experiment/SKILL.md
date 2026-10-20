@@ -28,7 +28,7 @@ Read the design brief, project instructions and existing evidence. State:
 - Required inputs, environments, existing software and permissions.
 - What observation would establish the bounded claim, what would contradict it, and what would leave it unresolved.
 
-Keep generality explicit. "An ordinary terminal" and "a terminal launched by our harness" are different claims. If the brief says "any terminal", agree the intended domain and coverage needed; a successful sample cannot establish an unrestricted universal claim. A narrower interim result must remain narrower, not silently replace the brief.
+Keep the claim's scope explicit. Agree which inputs and environments it covers and what evidence that coverage requires. Success on a selected sample does not establish an unrestricted universal claim. A narrower interim result must remain narrower, not silently replace the brief.
 
 Use [the experiment protocol](../../references/experiment-protocol.md) for the shared record, evidence and isolation requirements. Follow `source-driven-development` for version-sensitive mechanisms.
 
@@ -36,9 +36,11 @@ Use [the experiment protocol](../../references/experiment-protocol.md) for the s
 
 Remove unrelated features, styling and abstractions. Keep every condition whose removal would make the test stop answering the question.
 
-For docking, use an independently opened terminal if that is the claim. Do not require a special launch wrapper, transparent setting or cooperative provider simply because it makes identification easier. A substitute outside the uncertain boundary may be useful, but name it and explain what it prevents us concluding. A substitute at that boundary is not proof.
+Do not introduce preparation or cooperation that removes the difficulty the experiment is meant to investigate. A substitute outside the uncertain boundary may be useful, but name it and explain what it prevents us concluding. A substitute at that boundary is not proof.
 
-Include a known-different case that exposes a misleading success: an unrelated terminal must not be selected or controlled, for example. Choose relevant failure or recovery cases in proportion to the claim.
+Include a known-different case that would expose a misleading success. Choose relevant failure or recovery cases in proportion to the claim.
+
+**Example: docking to an existing terminal.** If the claim concerns a terminal independently opened by the user, test that path. A specially launched terminal with cooperative settings does not establish the same capability. An unrelated terminal provides a negative case: it must not be selected or controlled.
 
 Agree a bounded scope, budget and stopping rule before running. If required access or hardware is absent, report the missing condition. Do not redesign the test to make it pass.
 
