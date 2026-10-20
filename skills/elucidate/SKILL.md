@@ -9,17 +9,21 @@ description: Explains a working prototype through a source-grounded interactive 
 
 Make a prototype understandable enough for its owner to explain, challenge and deliberately improve the design. Produce an interactive HTML architecture guide grounded in source and observations, with proposals visibly separate from the implementation.
 
+Elucidate establishes what we have and what we want. Subsequent specification work validates the proposed design and turns it into buildable requirements and contracts.
+
 ## When to Use
 
 - A prototype works, but its full structure and behavior need to be understood before specification.
 - The user wants to inspect components, interfaces and code through a connected architecture map.
 - Feedback and release constraints need to be placed against the system they affect.
 
-**Not for:** a narrow code question, authoring requirements from scratch (`spec-driven-development`), scheduling implementation (`planning-and-task-breakdown`), or judging a finished change (`code-review-and-quality`).
+**Not for:** a narrow code question, writing buildable specifications or detailed API contracts, scheduling implementation, or judging a finished change.
 
 ## Process
 
-### 1. Establish the design question and freeze the evidence
+### 1. Examine the example and establish the design question
+
+Before starting the project's walkthrough, read the [example notes](references/voyagershell-example.md) and examine the [VoyagerShell architecture walkthrough](references/voyagershell/index.html). Follow one complete journey through its components, interfaces and source excerpts, then inspect how it separates current behavior from proposed changes. Use it to understand the expected depth and reading experience, not as the architecture or requirements for another project.
 
 Read the user's brief, drawings, prototype instructions, recorded experiments and accepted decisions. Confirm the intended audience, scope and established document home. Inspect the actual repository, revision and dirty state.
 
@@ -59,11 +63,9 @@ Test node and edge selection, journey navigation, source links, keyboard operati
 
 Walk through a complete journey with the user. Invite corrections and questions; use them to update the same guide. Do not require a quiz or treat a read receipt as shared understanding.
 
-### 6. Hand the understood design to specification
+### 6. Record the shared understanding
 
-Record accepted changes, proposals still awaiting choice, factual gaps and demonstrated limits. Link the guide, code sketch if one exists, prototype or UX references and relevant experiment evidence from the design handoff.
-
-Invoke `spec-driven-development` only when requested or authorized to proceed. That skill owns the requirements and approval process; `api-and-interface-design` owns detailed contract design. Link those artifacts instead of writing another competing specification here.
+Finish with a clear account of what exists, what the user wants to change, which decisions are agreed, and what remains uncertain. Keep those distinctions in the guide. Link any existing code sketch, prototype, UX references and experiment evidence where they support that understanding.
 
 ## Common Rationalizations
 
@@ -85,10 +87,11 @@ Invoke `spec-driven-development` only when requested or authorized to proceed. T
 
 ## Verification
 
+- [ ] The reference walkthrough was examined before work began.
 - [ ] The source snapshot, evidence scope and outstanding gaps are recorded.
 - [ ] Components and interfaces trace to actual source at that snapshot.
 - [ ] Complete journeys explain behavior, ownership and relevant failure boundaries.
 - [ ] Current, observed, proposed and deferred claims remain distinguishable.
 - [ ] The HTML guide's interactions, links, keyboard use and layout were exercised.
 - [ ] User feedback and accepted decisions update the canonical guide.
-- [ ] The specification handoff links the guide and experience evidence without duplicating their authority.
+- [ ] The guide records the desired changes, agreed decisions and unresolved questions, with links to supporting artifacts.
