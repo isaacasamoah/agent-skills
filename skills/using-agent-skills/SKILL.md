@@ -18,6 +18,9 @@ Task arrives
     │
     ├── Don't know what you want yet? ──────→ interview-me
     ├── Have a rough concept, need variants? → idea-refine
+    ├── Uncertain capability, need real proof? → feasibility-experiment
+    ├── Competing approaches, need data? ───→ comparative-experiment
+    ├── Prototype needs a source-backed map? → elucidate
     ├── New project/feature/change? ──→ spec-driven-development
     ├── No quality bar written down? ──→ constraint-driven-development
     ├── Have a spec, need tasks? ──────→ planning-and-task-breakdown
@@ -136,7 +139,7 @@ These are the subtle errors that look like productivity but create problems:
 
 3. **Multiple skills can apply.** A feature implementation might involve `idea-refine` → `spec-driven-development` → `planning-and-task-breakdown` → `incremental-implementation` → `test-driven-development` → `code-review-and-quality` → `code-simplification` → `shipping-and-launch` in sequence.
 
-4. **When in doubt, start with a spec.** If the task is non-trivial and there's no spec, begin with `spec-driven-development`.
+4. **Before committed feature implementation, start with a spec.** For an explicitly exploratory task, use a bounded `feasibility-experiment` or `comparative-experiment` first. Its agreed question and protocol bound experimental code; they do not authorize production implementation. Use `elucidate` when the prototype needs shared architectural understanding before specification.
 
 ## Lifecycle Sequence
 
@@ -169,6 +172,9 @@ Not every task needs every skill. A bug fix might only need: `debugging-and-erro
 |-------|-------|-----------------|
 | Define | interview-me | Surface what the user actually wants before any plan, spec, or code exists |
 | Define | idea-refine | Refine ideas through structured divergent and convergent thinking |
+| Define | feasibility-experiment | Test one uncertain capability on the real surface |
+| Define | comparative-experiment | Compare hypotheses or approaches with controlled data |
+| Define | elucidate | Understand the prototype through an interactive source-backed architecture map |
 | Define | spec-driven-development | Requirements and acceptance criteria before code |
 | Plan | planning-and-task-breakdown | Decompose into small, verifiable tasks |
 | Build | incremental-implementation | Thin vertical slices, test each before expanding |

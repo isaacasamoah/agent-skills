@@ -1,0 +1,49 @@
+{
+  "skill_name": "elucidate",
+  "trigger": {
+    "positive": [
+      {
+        "prompt": "Turn this working prototype into an interactive HTML architecture map with clickable systems and interfaces",
+        "top_k": 3
+      },
+      {
+        "prompt": "Help me understand the full system end to end, drilling from component responsibilities to code",
+        "top_k": 3
+      },
+      {
+        "prompt": "Elucidate what the prototype does and annotate proposed changes before we specify the production design",
+        "top_k": 3
+      }
+    ],
+    "negative": [
+      {
+        "prompt": "Break the approved specification into small implementation tasks",
+        "owner": "planning-and-task-breakdown"
+      },
+      {
+        "prompt": "Review this diff before I merge it",
+        "owner": "code-review-and-quality"
+      }
+    ]
+  },
+  "evals": [
+    {
+      "id": 1,
+      "kind": "execution",
+      "prompt": "Use brief.md and the local source to create the interactive architecture walkthrough at report.html. Keep current behavior separate from the proposed Rust service and release goals. Link to the inspected source, explain an end-to-end journey and failure, and verify the local reading surface using available tools. Do not implement the proposed system or run external services.",
+      "expected_output": "A navigable HTML map with real component and interface semantics, source drilldowns and explicit implemented/proposed boundaries, plus an honest verification record.",
+      "files": [
+        "elucidate"
+      ],
+      "expectations": [
+        "The map follows the current Node CLI to createTask and appendTask rather than inventing an existing Rust service, socket transport or desktop client",
+        "Nodes and edges are selectable and their detail explains responsibilities and actual payload/call semantics",
+        "Code links or excerpts trace to the inspected files and revision, with any dirty state disclosed",
+        "The proposed Rust service and desktop release are distinguished from implemented behavior",
+        "A failed storage write is explained without claiming persistence succeeded",
+        "The report records checks actually performed and any missing browser/runtime verification without presenting source inspection as native proof",
+        "No proposed production implementation is added"
+      ]
+    }
+  ]
+}

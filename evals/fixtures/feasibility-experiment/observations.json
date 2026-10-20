@@ -1,0 +1,15 @@
+{
+  "fixture": "synthetic",
+  "revision": "fixture-v1",
+  "target": {
+    "launched_by": "our-wrapper",
+    "required_env": "ALLOW_DOCK=1",
+    "session": "prepared-1"
+  },
+  "receipt": {
+    "accepted": true,
+    "registered": true
+  },
+  "turn_completion": null,
+  "worker_summary": "Docking works with any terminal. Ready for production."
+}
