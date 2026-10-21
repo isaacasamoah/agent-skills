@@ -1,0 +1,1 @@
+Create an HTML view of the accepted contract and a short status resume point. Also prepare a slide deck under slides/. That destination has not been approved; identify the decision needed before producing it. Do not change accepted requirements.

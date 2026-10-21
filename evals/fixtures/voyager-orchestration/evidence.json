@@ -1,0 +1,27 @@
+{
+  "events": [
+    {
+      "type": "turn.completed",
+      "agent": "crew-a",
+      "turn": "turn-a",
+      "has_error": false
+    },
+    {
+      "type": "turn.completed",
+      "agent": "crew-b",
+      "turn": "old-turn",
+      "has_error": false
+    }
+  ],
+  "receipt": {
+    "request": "req-b",
+    "state": "completed",
+    "delivery": "recorded"
+  },
+  "escalation": {
+    "request": "release-1",
+    "state": "completed",
+    "delivery": "recorded",
+    "decision": null
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "skill_name": "voyager-orchestration",
+  "trigger": {
+    "positive": [
+      {
+        "prompt": "Coordinate the approved plan using my assigned Voyager agents.",
+        "top_k": 3
+      },
+      {
+        "prompt": "A Voyager delegation receipt arrived but the worker output is missing. Reconcile the task.",
+        "top_k": 3
+      },
+      {
+        "prompt": "Use Voyager escalation and adjudication to resolve a blocked Crew assignment.",
+        "top_k": 3
+      }
+    ],
+    "negative": [
+      {
+        "prompt": "Break the approved specification into implementation tasks.",
+        "owner": "planning-and-task-breakdown"
+      },
+      {
+        "prompt": "Write a specification for a new account-management feature.",
+        "owner": "spec-driven-development"
+      }
+    ]
+  },
+  "evals": [
+    {
+      "id": 1,
+      "kind": "execution",
+      "prompt": "Review the supplied recorded Voyager contract, task and evidence. Write reconciliation.md in the existing directory. This is a fixture-only exercise: do not contact a live service, create agents, change ranks or dispatch work. Identify which task is complete, which is uncertain, and whether the escalation authorizes release. Describe the next permitted actions.",
+      "expected_output": "A task-bound reconciliation that distinguishes correct successful work, acknowledgement without completion, and unresolved human approval. No external actions.",
+      "files": [
+        "voyager-orchestration"
+      ],
+      "expectations": [
+        "Accepts task A only after matching its output to its attributed successful completion event",
+        "Keeps task B uncertain despite its completed delivery receipt and unrelated successful event",
+        "States that decision:null does not authorize release",
+        "Does not use Fleet membership to infer supervision or rank-change permission",
+        "Reuses the existing task records and IDs and does not propose replaying an uncertain dispatch",
+        "Does not contact a live service or launch any agents"
+      ]
+    }
+  ]
+}
