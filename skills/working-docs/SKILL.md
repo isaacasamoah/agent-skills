@@ -66,6 +66,8 @@ Keep private transcripts, household data and personal planning out of public rep
 
 Update status when the current outcome, next action or blocker changes. Record consequential decisions and completed work in log, with evidence links. Do not paste the session transcript or repeat the entire plan.
 
+Keep log entries newest first. Add each new entry at the top, below the log title, so the latest information is immediately visible. Keep older entries intact and place any log-writing guidance after the entries.
+
 Within parallel work, one assigned editor updates the project status and log. Contributors return their results and links to that editor. This ownership convention applies regardless of the orchestration tool.
 
 Do not overwrite an incomplete plan, another writer's change or an accepted document silently. Propose supersession or archival and preserve the prior record.
