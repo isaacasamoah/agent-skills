@@ -13,3 +13,5 @@ Isaac subsequently narrowed the output-format policy in working-docs. HTML remai
 Source lives in ~/agent-skills. Setup edits use ~/the-workshop/.worktrees. Home discovery points to a fixed release under ~/.local/share/agent-skills/releases. Publication to the fork is a separate action from local activation. Do not edit installed release files.
 
 On 22 October 2026 Isaac requested the original Unslop for a comparison with the existing writing guidance. Lauren Tan’s original pstack skill is preserved unchanged in `external-skills/unslop/`, with its MIT license and pinned source/hash. It is installed alongside the 30 catalog skills. The existing catalog, validators and global writing instructions are unchanged. The upstream invocation setting remains intact; proactive and reactive use are explicit trial conditions, not a changed automatic default.
+
+On 22 October 2026 Isaac approved `screenshots/` beneath the canonical folder containing the supported documents. working-docs now keeps screenshot evidence there, with identifiable filenames and relative links, so document listings remain easy to scan. Existing screenshot moves preserve content and update references.

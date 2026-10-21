@@ -58,6 +58,8 @@ Keep project commands and standing conventions in project instructions, behavior
 
 Give the document a stable, meaningful subject name. Include project, purpose, state, source revision when relevant, and links to its inputs and related artifacts. For immutable experiment evidence, include the run identifier or date. Update a living document in place; use version control for history.
 
+Store screenshot evidence in a `screenshots/` subfolder of the canonical folder containing the documents it supports, such as `research/screenshots/` or `explainer/screenshots/`. Keep document files in the parent folder. Name each screenshot so its document and capture are identifiable, and link it using a relative path. The `screenshots/` evidence subfolder is part of this approved layout; create it when needed within an approved canonical folder. When moving existing screenshots, preserve their contents and update document links and evidence records.
+
 Keep human HTML portable and usable offline where practical. Use readable source formatting, local assets and no required third-party scripts. Test navigation and referenced files. Verify the rendered view when changing its layout or interaction. Show when a generated view is out of date.
 
 Keep private transcripts, household data and personal planning out of public repositories. A public README or PR can link only audience-accessible material; publish an explicitly approved summary when the canonical working document is private.
