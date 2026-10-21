@@ -1,0 +1,56 @@
+{
+  "skill_name": "unslop",
+  "trigger": {
+    "positive": [
+      {
+        "prompt": "Draft a clear explanation with a plain title for human readers.",
+        "top_k": 3
+      },
+      {
+        "prompt": "This prose sounds smart but is hard to follow. Rewrite it plainly.",
+        "top_k": 3
+      },
+      {
+        "prompt": "Unslop this verbose review without losing evidence or caveats.",
+        "top_k": 3
+      }
+    ],
+    "negative": [
+      {
+        "prompt": "Simplify this working function without changing its behavior.",
+        "owner": "code-simplification"
+      },
+      {
+        "prompt": "Find why the tests started failing.",
+        "owner": "debugging-and-error-recovery"
+      }
+    ]
+  },
+  "evals": [
+    {
+      "id": 1,
+      "kind": "dialogue",
+      "prompt": "Draft a short review with a title. The app now rejects invalid dates before saving. The three parser tests pass; no UI test ran. The provided PR is titled Reject invalid dates at https://example.com/repo/pull/42 and the commit titled Validate before saving is at https://example.com/repo/pull/42/commits/abcdef1234567. Use only these facts and supplied links; do not browse or write files.",
+      "expected_output": "Plain title and explanation with named links to the supplied PR and relevant commit, preserving the UI test limitation.",
+      "expectations": [
+        "Applies Unslop before drafting without a separate user request to edit",
+        "Uses a concrete title and explains what changed",
+        "Preserves the distinction between parser tests and untested UI",
+        "Uses readable link labels rather than a raw commit hash",
+        "Does not claim the supplied example URLs were independently verified"
+      ]
+    },
+    {
+      "id": 2,
+      "kind": "dialogue",
+      "prompt": "Edit this review and its title for clarity: 'Validation substrate ratchet. The highly pivotal change abcdef1234567 ensures seamless success, leveraging date validation. Three parser tests pass. The UI has not been tested.' The change rejects invalid dates before saving. It is unpublished and its source is /tmp/example/src/date.ts. No PR exists. Do not browse or write files.",
+      "expected_output": "A clear title and edited review with a named local source link, preserving test limits and omitting unsupported claims.",
+      "expectations": [
+        "Revises the confusing title and subsequent paragraphs",
+        "Removes unsupported success claims and inflated language",
+        "Keeps all supplied factual qualifications",
+        "Uses the supplied local source link and does not invent a remote commit or PR URL"
+      ]
+    }
+  ]
+}
