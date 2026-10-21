@@ -7,7 +7,7 @@
         "top_k": 3
       },
       {
-        "prompt": "Create the human HTML reading view from our canonical Markdown specification.",
+        "prompt": "Check the formats and canonical destinations of our project specification and plan documents.",
         "top_k": 3
       },
       {
@@ -30,15 +30,16 @@
     {
       "id": 1,
       "kind": "execution",
-      "prompt": "Read AGENTS.md and request.md. Produce the requested reading view and update the resume point in the approved paths. Do not create directories. Identify any requested output without an approved destination and leave that decision open.",
-      "expected_output": "An HTML reading view derived from the existing requirements, a source hash, a concise status update and an explicit unresolved destination, without extra folders or competing requirements.",
+      "prompt": "Read AGENTS.md and request.md. Record the accepted change and update the resume point in the approved paths. Do not create directories. Identify any requested output without an approved destination and leave that decision open.",
+      "expected_output": "Updated canonical Markdown requirements and task plan, a concise status update, a newest-first log entry and an explicit unresolved destination, without HTML copies or extra folders.",
       "files": [
         "working-docs"
       ],
       "expectations": [
-        "Creates the reading view in specs/ and identifies the exact source and its hash",
-        "Preserves the existing Markdown requirements as the authority instead of independently rewriting requirements",
-        "Keeps task scheduling in plans/build.md and links it from status",
+        "Adds the accepted 100-record export limit to specs/contract.md without changing the existing selected-record and atomic-write requirements",
+        "Keeps the specification and plan in Markdown and creates no HTML copies even though the user will read them",
+        "Updates the existing task in plans/build.md without changing its ready state or unassigned owner, and links it from status",
+        "Prepends the new decision below the log title and preserves the older entry",
         "Does not create slides/ or another unapproved substitute destination",
         "Reports the unresolved slide-deck request rather than silently dropping it"
       ]

@@ -1,6 +1,6 @@
 ---
 name: working-docs
-description: Places and maintains project working documents in their canonical home. Use when deciding where to save a project walkthrough and its evidence, creating an HTML reading view from Markdown requirements, or updating a specification, code sketch reference, plan, research report, project status or log. Not for choosing architecture, decomposing implementation, or coordinating agents.
+description: Places and maintains project working documents in their canonical home. Use when deciding where to save a project walkthrough and its evidence, selecting document formats, or updating a specification, code sketch reference, plan, research report, project status or log. Not for choosing architecture, decomposing implementation, or coordinating agents.
 ---
 
 # Working docs
@@ -33,18 +33,18 @@ Use the project's declared layout. The default layout, when adopted by a project
 
 | Purpose | Existing destination | Authority and format |
 |---|---|---|
-| Understand an existing or proposed system; walkthrough or review | explainer/ | HTML guide, with source and observation boundaries |
-| Define agreed behavior and contracts; UX requirements and code sketches | specs/ | Markdown requirements for agents; linked native code and UX artifacts; HTML reading view |
-| Break an agreed specification into tasks | plans/ | Markdown plan and task state, or the project's declared external tracker; HTML reading view |
+| Understand an existing or proposed system; walkthrough or review | explainer/ | HTML for explainers and reviews intended for Isaac to read; otherwise the owning skill's format |
+| Define agreed behavior and contracts; UX requirements and code sketches | specs/ | The specification skill's format; linked native code and UX artifacts |
+| Break an agreed specification into tasks | plans/ | The planning skill's format, or the project's declared external tracker |
 | Investigate a question or compare approaches | research/ | HTML findings; Markdown run instructions only when needed; linked raw evidence in its native format |
 | Resume current work | status.md at the project documentation root | Markdown current state and links |
 | Record what happened and why | log.md at the project documentation root | Markdown dated history and links |
 
 The table does not authorize creating missing directories. Reviews use explainer/ with a review suffix under this layout; surface the mismatch if the project's established convention differs.
 
-Agent-facing instructions are Markdown. Human-facing explanations are HTML. Code, schemas, drawings and measurements retain their native formats and are linked as evidence rather than rewritten as prose.
+HTML is the default for documents Isaac reads, including explainers, elucidate outputs and research findings. Specifications and plans keep their owning skill's format. Other agent-facing deliverables also follow their owning skill; agent instructions, status and log are Markdown. Code, schemas, drawings and measurements retain their native formats and are linked as evidence rather than rewritten as prose.
 
-When both audiences need the same requirements or task list, maintain the Markdown source once and generate the HTML reading view. Identify its source revision or hash. Never maintain two independent editable specifications. A human-only explanation can be authored directly in HTML. Do not create an unused Markdown twin.
+Do not create HTML copies of specifications or plans by default, even when Isaac will read them. If he explicitly requests a separate reading view, derive it from the authoritative source and identify that source's revision or hash. Never maintain two independent editable specifications. Author human-facing explainers and research directly in HTML without an unused Markdown twin.
 
 ### 3. Write the content with its owning skill
 
@@ -77,13 +77,13 @@ Do not overwrite an incomplete plan, another writer's change or an accepted docu
 | Rationalization | Response |
 |---|---|
 | A new folder will make this easier to file | First establish whether the output is needed and where it belongs. |
-| A second spec will be easier for the human to read | Render the authoritative requirements for the human. |
+| A second spec will be easier for the human to read | Keep the specification in its owning skill's format. Create a separate reading view only when requested. |
 | The report is finished because it was saved | Check the reading surface, evidence and destination. |
 | Status should contain all previous progress | Status is the current resume point. History belongs in log. |
 
 ## Red Flags
 
-- Independent HTML and Markdown copies of the same requirements.
+- An unrequested HTML copy of a specification or plan, or independent copies of the same requirements.
 - An output saved outside the declared project home.
 - A new folder created without approval.
 - A private absolute path offered as a usable public PR reference.
@@ -94,6 +94,7 @@ Do not overwrite an incomplete plan, another writer's change or an accepted docu
 - The project, purpose and existing destination are explicit.
 - No unapproved directory was created.
 - Each substantive fact has an identified authoritative artifact.
-- Human output is HTML; agent instructions are Markdown.
+- Human-facing explainers and research use HTML; other agent-facing deliverables follow their owning skill's format.
+- Specifications and plans have no unrequested HTML copy; agent instructions, status and log are Markdown.
 - References resolve and any derived view matches its source.
 - Current status and consequential history are recorded once.
