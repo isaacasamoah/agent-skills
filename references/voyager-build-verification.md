@@ -1,6 +1,12 @@
-# Optional build-and-verification workflow
+# Optional delegated build-and-verification workflow
 
-Candidate for the user-selected Osmani development setup. This is not a Voyager requirement. Other setups supply their own workflow and quality checks. Review and trial before adoption.
+Candidate for the user-selected Osmani development setup. The procedure is independent of its coordination provider. Voyager is one explicit binding; another provider must meet the same assignment, evidence and permission requirements. This procedure is not a Voyager requirement. Review and trial before adoption.
+
+## Separate the procedure from its coordination provider
+
+This reference owns the build sequence, worker roles, quality checks, correction limits and definition of done. It consumes an agreed specification and plan. The chosen provider owns identity, permitted agent creation, communication, delivery and execution observations. It must distinguish assigning work from reporting information, and accepted delivery from completed work.
+
+Select one provider for the run. If it cannot supply independent verification, bounded assignments or required completion evidence, report the gap before dispatch. Do not quietly substitute another launcher, broaden permissions or treat a message as an instruction. No provider-specific command belongs in a builder's development skill.
 
 ## Choose the execution mode
 
@@ -10,7 +16,7 @@ Keep the user's ordinary supervised development flow as the default. Select this
 |---|---|---|
 | Implement the next task, or `/build` where that command is installed | The current builder completes the next planned task with its required checks, then stops. | A fleet, whole-plan execution or automatic independent review. |
 | `/build auto` or `/build all`, where installed | The current builder follows the existing command: require a spec, establish the baseline, prepare/approve the plan if needed, and execute its tasks in dependency order with the same testing loop and blocker rules. | A fleet or a fresh independent verifier after each slice. |
-| Run the approved spec and plan as our delegated build-and-verify workflow through Voyager | One authorized captain assigns builders and independent verifiers, checks cohesion, integrates, reports and escalates within this reference. | Design/spec/plan generation, recursive delegation or shipping. |
+| Run the approved spec and plan as our delegated build-and-verify workflow with an explicitly selected provider | One authorized captain assigns builders and independent verifiers, checks cohesion, integrates, reports and escalates within this reference. | Design/spec/plan generation, recursive delegation or shipping. |
 | Use Voyager to send a task, gather reports, or request a review | Follow generic voyager-orchestration and the selected task procedure. | This whole-feature workflow. |
 | Review the result, or `/review` where installed | Follow code-review-and-quality. The actual command runs its skill in the current session; a separate reviewer must be assigned explicitly. | A new independent context merely because the word review was used. |
 
@@ -18,7 +24,7 @@ The command names above describe existing wrappers, not new Voyager commands or 
 
 ## Triggers, exclusions and examples
 
-Start only when all are established: the selected workflow, approved spec and plan, permission to delegate through Voyager, available capabilities, explicit assignment criteria and an applicable resource bound. Missing inputs are a preparation blocker, not permission for the captain to invent them. The coordinator may be a standalone vessel with explicit authority; visible Fleet grouping is optional and never grants authority.
+Start only when all are established: the selected workflow, approved spec and plan, permission to delegate through the selected provider, available capabilities, explicit assignment criteria and an applicable resource bound. Missing inputs are a preparation blocker, not permission for the captain to invent them. The coordinator may be a standalone vessel with explicit authority; visible Fleet grouping is optional and never grants authority.
 
 | Example request | Expected routing |
 |---|---|
@@ -45,7 +51,7 @@ This is a candidate outside the endorsed upstream catalog. Its addition rule req
 
 ### Assign one captain
 
-Give one captain responsibility for the complete feature, integration, cohesion and quality. Only that captain creates workers and assigns their work. Builders and verifiers may exchange questions and evidence but do not instruct each other or create agents. Use one delegation layer. Fleet membership is grouping, not permission; check the actual service contract before any operation. If required permissions or communication are unavailable, report the gap rather than substituting owner access.
+Give one captain responsibility for the complete feature, integration, cohesion and quality. Only that captain creates workers and assigns their work. Builders and verifiers may exchange questions and evidence but do not instruct each other or create agents. Use one delegation layer. Grouping is not permission; check the selected provider contract before any operation. If required permissions or communication are unavailable, report the gap rather than substituting owner access.
 
 The captain reads the full agreed specification and plan, then sends each worker the bounded assignment and relevant source sections. Use the existing plan for task state, dependencies and verification attempts. Do not maintain a second fleet task list. Set concurrency and any resource budget for the authorized run; do not assume unlimited workers. Start with sequential slices unless the approved plan and run limits allow parallel execution. A stalled worker or missing evidence cannot cause indefinite waiting or automatic replacement; apply the agreed stopping condition and reconcile delivery state.
 
@@ -70,6 +76,14 @@ Choose an acceptable in-scope solution when one meets the specification. Record 
 
 Finish with integrated, independently verified work ready for user review. Report remaining limitations and evidence through the existing project records. Recursive delegation, deeper management layers and automatic shipping are outside this workflow. Technical acceptance does not authorize merge, activation or release.
 
+
+## Voyager binding
+
+When the run explicitly selects Voyager, use voyager-orchestration for supported CLI operations, identity, permissions, delivery reconciliation and completion evidence. Inspect current capabilities. Preserve the caller environment and request identifiers. Map the coordinator to a vessel with the required explicit authority and workers to permitted assigned vessels. Fleet grouping remains optional and does not define the workflow or grant rights.
+
+Voyager's current send operation instructs an agent; it is not an unrestricted peer-information channel. If the selected workflow needs a communication capability that the service lacks, report that gap or use an explicitly agreed coordinator-mediated route. Do not assume a new messaging command exists.
+
+Do not run the normal command's built-in delegation alongside Voyager delegation for the same work. A provider adapter translates these responsibilities; it does not rewrite the spec, checks, retry limits or release policy. The current adapter is a documented candidate, not a verified portable implementation.
 
 ## Trial and refinement
 
