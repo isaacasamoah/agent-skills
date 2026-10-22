@@ -1,6 +1,6 @@
 ---
 name: voyager-orchestration
-description: Coordinates authorized agent work through Voyager using delegation, communication, escalation, adjudication and Fleets. Use when the user or approved workflow explicitly selects Voyager for coordination. Not for choosing a development process, writing specifications, a single review, or parallel work without Voyager selection.
+description: Coordinates authorized agent work through Voyager using delegation, communication, escalation, adjudication and Fleets. Use when the user or approved workflow explicitly selects Voyager for coordination. Not for choosing a development process, writing specifications, ordinary single-agent review, or parallel work without Voyager selection.
 ---
 
 # Voyager orchestration
@@ -80,7 +80,7 @@ Use this skill only when Voyager is selected for the coordination. Parallelizabl
 
 Osmani's orchestration-patterns reference describes how its commands and personas compose; it is not a second auto-triggered skill. It remains guidance for that setup. Do not change upstream persona rules or silently run an entire development lifecycle merely because Voyager can delegate.
 
-If the user explicitly selects the candidate captain/build/verify workflow, read [the optional workflow](../../references/voyager-build-verification.md). It owns the specific review skill, two-pass limit and final verifier. Other projects may supply a different procedure. Its availability does not authorize execution, and its restrictions do not redefine every Fleet.
+If the user explicitly selects the candidate captain/build/verify workflow, read [the optional workflow](../../references/voyager-build-verification.md). It owns mode selection against build-auto, trigger and exclusion examples, the specific review skill, two-pass limit and final verifier. Other projects may supply a different procedure. Its availability does not authorize execution, and its restrictions do not redefine every Fleet.
 
 ## Common Rationalizations
 
