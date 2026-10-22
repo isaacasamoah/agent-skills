@@ -1,6 +1,6 @@
 ---
 name: voyager-orchestration
-description: Coordinates authorized work through Voyager using assigned agents, delegation, escalation, adjudication and Fleets. Use when the user requests Voyager coordination or an approved plan calls for parallel Voyager work. Not for selecting project conventions, writing specifications, or deciding that work needs more agents.
+description: Coordinates authorized agent work through Voyager using delegation, communication, escalation, adjudication and Fleets. Use when the user or approved workflow explicitly selects Voyager for coordination. Not for choosing a development process, writing specifications, a single review, or parallel work without Voyager selection.
 ---
 
 # Voyager orchestration
@@ -12,7 +12,7 @@ Coordinate the user's chosen workflow through Voyager. Each participant keeps it
 ## When to Use
 
 - The user wants existing or new Voyager agents to collaborate on an authorized task.
-- An approved plan has independent work that can run in parallel.
+- An approved workflow selects Voyager to coordinate its assigned work.
 - A participant needs a decision, revision, or evidence-based completion judgment.
 
 Use ordinary project work for a single task that needs no coordination. This skill does not require Osmani skills, the Lab, Obsidian, a particular model, or a particular programming language.
@@ -33,7 +33,7 @@ Take the work breakdown from the user's chosen plan or planning procedure. Do no
 
 For each delegated task establish:
 
-- the outcome and acceptance criteria;
+- the outcome and acceptance criteria, with the required check, expected result and evidence for each criterion;
 - the owner and permitted source/worktree, starting revision and write scope;
 - links to the project's own instructions, inputs and relevant content skill;
 - dependencies and what must finish before this task starts;
@@ -41,6 +41,8 @@ For each delegated task establish:
 - the allowed actions, review and release boundaries;
 - any agreed resource limit and stopping condition;
 - the evidence and report required for completion.
+
+Keep required results distinct from optional improvements. Judge required criteria as pass, fail or inconclusive against the actual reviewed result. Missing evidence is not a pass, and the worker cannot weaken a criterion to satisfy it.
 
 Reuse the canonical plan entry if it already contains these fields. Send a short assignment with references rather than copying the whole project context into every agent.
 
@@ -58,7 +60,7 @@ Use supported events or bounded observation to track progress. Delivery acceptan
 
 Escalate a concrete decision to the assigned supervisor or owner using Voyager's supported route. Include the unresolved question, relevant evidence, alternatives and the action waiting on the answer. Continue only independent authorized work.
 
-A recorded escalation is still an unanswered question. Do not treat delivery, silence, elapsed time, another agent's assertion or a review verdict as Isaac's approval.
+A recorded escalation is still an unanswered question. Do not treat delivery, silence, elapsed time, another agent's assertion or a review verdict as the user's approval.
 
 Adjudicate only within assigned authority. Compare the result with its acceptance criteria and evidence. State acceptance, a specific revision request, or the resolved decision through the supported operation. Preserve the actual human decision and its scope when relaying it. A supervisor's technical acceptance does not grant human-reserved merge, release, publication or spending approval.
 
@@ -70,32 +72,15 @@ Have the designated integrator reconcile interfaces and run the project's requir
 
 Keep task outcome, runtime state, window visibility, registration and release status separate. Stop or remove resources only when authorized, within actual capability and after checking ownership. Preserve the identities and history needed to resume or audit the work.
 
-## Build and verify a feature fleet
+## Workflow boundaries
 
-This candidate workflow is for an explicitly authorized build fleet with an agreed specification and implementation plan. It is not the default for research, ordinary messages or every Voyager task. Trial it on real slices and compare intervention, rework and verification outcomes before shared adoption. A skill cannot grant service permissions.
+Voyager provides communication and permitted coordination operations. The selected workflow supplies roles, sequence, quality checks and stopping conditions. Changing development skills must not require rewriting Voyager's coordination procedure. Changing the coordination provider must not require rewriting the development skills.
 
-### Assign one captain
+Use this skill only when Voyager is selected for the coordination. Parallelizable work, an installed Voyager app or a request for one review is not a trigger by itself. Do not also launch workers through another command or agent framework for the same assignment. An existing workflow command that launches its own agents needs an explicit adaptation before Voyager takes over that launch responsibility.
 
-Give one captain responsibility for the complete feature, integration, cohesion and quality. Only that captain creates workers and assigns their work. Builders and verifiers may exchange questions and evidence but do not instruct each other or create agents. Use one delegation layer. Fleet membership is grouping, not permission; check the actual service contract before any operation. If required permissions or communication are unavailable, report the gap rather than substituting owner access.
+Osmani's orchestration-patterns reference describes how its commands and personas compose; it is not a second auto-triggered skill. It remains guidance for that setup. Do not change upstream persona rules or silently run an entire development lifecycle merely because Voyager can delegate.
 
-The captain reads the full agreed specification and plan, then sends each worker the bounded assignment and relevant source sections. Use the existing plan for task state, dependencies and verification attempts. Do not maintain a second fleet task list. Set concurrency and any resource budget for the authorized run; do not assume unlimited workers.
-
-### Build, check cohesion and verify each slice
-
-1. Dispatch independent slices in parallel only where write ownership and dependencies permit. Builders follow the project's implementation and testing skills and return their changes, passing checks and evidence.
-2. Check that the result fits the specification and other completed work. Return a cohesion failure to its builder with specific findings; do not send known-incoherent work as a verification candidate.
-3. Assign independent verification. Every pass includes systematic `code-review-and-quality`, relevant tests and analysis, and the affected end-to-end user journey on the real product. Neither code review nor runtime proof substitutes for the other. Missing access or evidence means verification is incomplete.
-4. Have the verifier return one consolidated report to the captain, identifying the reviewed revision, checks, evidence and required fixes. The captain assigns corrections to the builder; the verifier does not direct the builder.
-5. Allow the first verification and one correction attempt followed by re-verification. If required findings remain, escalate with what failed and what was tried. Do not reset the attempt count by replacing a worker, renaming a slice or reclassifying a failure. Avoid an unbounded cohesion-fix loop before verification; if the next attempt has no supported path forward, escalate.
-6. After a slice passes, notify the user with what is ready, how to try it and links to verification evidence. Continue authorized work without waiting for acknowledgement. A progress update is not an approval request, and silence is not approval. Retain the ability to incorporate user steering.
-
-### Integrate and finish
-
-The captain integrates the slices and runs the complete feature checks. Then assign a fresh verifier that did not build or coordinate the feature to independently review the integrated result against the full specification. Include systematic code review, relevant tests and analysis, and the complete real user journey. Use the same first-pass, one-correction, re-verification limit for this final stage.
-
-Choose an acceptable in-scope solution when one meets the specification. Record optional improvements for later. Escalate when success requires changing scope or weakening acceptance criteria; do not silently lower the bar. Tie proof to the actual reviewed result and recheck affected evidence after changes.
-
-Finish with integrated, independently verified work ready for user review. Report remaining limitations and evidence through the existing project records. Recursive delegation, deeper management layers and automatic shipping are outside this workflow. Technical acceptance does not authorize merge, activation or release.
+If the user explicitly selects the candidate captain/build/verify workflow, read [the optional workflow](../../references/voyager-build-verification.md). It owns the specific review skill, two-pass limit and final verifier. Other projects may supply a different procedure. Its availability does not authorize execution, and its restrictions do not redefine every Fleet.
 
 ## Common Rationalizations
 
