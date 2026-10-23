@@ -1,102 +1,103 @@
 ---
 name: working-docs
-description: Places and maintains project working documents in their canonical home. Use when deciding where to save a project walkthrough and its evidence, selecting document formats, or updating a specification, code sketch reference, plan, research report, project status or log. Not for choosing architecture, decomposing implementation, or coordinating agents.
+description: Places and maintains human-facing Obsidian documentation. Use when choosing walkthrough or review destinations, research formats, screenshot evidence, project navigation, status or log. Not for authoring or executing repository work; defer to its canonical skills.
 ---
 
 # Working docs
 
 ## Overview
 
-Choose the document's purpose, owner and existing destination before writing it. Keep each fact authoritative in one place and produce the appropriate reading format from that source.
+Keep human-facing documentation in its approved Obsidian home. Link to development artifacts where they are maintained. This skill owns documentation presentation and navigation; the development skills own specifications, implementation plans and task execution.
 
 ## When to Use
 
-- The user requests a persistent explanation, specification, plan or research result.
-- Work changes a project's current status, accepted decisions or evidence.
-- An existing document needs updating, replacing or archiving.
+- Choose the destination or reading format for a walkthrough, research report or review.
+- Update human-facing project navigation, status or log from verified decisions and results.
+- Organize a document's screenshots and supporting evidence.
 
-Ordinary chat answers do not need a new document. Follow the relevant content skill for the actual reasoning and deliverable.
+Ordinary chat does not need a document. For a mixed request, use this skill for the human-facing portion and the relevant development skill for the rest.
 
 ## Process
 
-### 1. Resolve the project and destination
+### 1. Identify the owner before choosing a path
 
-Read the project's AGENTS.md and the declared documentation root. Use the named existing document when one already owns the subject. Search that project's files before creating another version.
+Read the project's instructions and declared documentation root. Search the existing documents before creating another version. Route each artifact to its owner:
 
-If the project, destination or purpose is unclear, ask whether this document should be produced and where it belongs. Do not create a folder or subfolder, invent a miscellaneous category, or save a substitute somewhere else while waiting. An approval that names the new directory is sufficient; do not request the same approval again.
+| Artifact | Owner |
+|---|---|
+| Development requirements and specification | [spec-driven-development](../spec-driven-development/SKILL.md) |
+| Implementation plan, dependencies and task-list target | [planning-and-task-breakdown](../planning-and-task-breakdown/SKILL.md) |
+| Building, verification and task completion | The selected build command and [incremental-implementation](../incremental-implementation/SKILL.md), with its required testing and review skills |
+| Branches, worktrees, commits and releases | [git-workflow-and-versioning](../git-workflow-and-versioning/SKILL.md) |
+| Human-facing walkthroughs, research, review presentation, navigation, status and log | This skill, with the content skill that produces the explanation or review |
 
-For an idea without a project, use the explicitly assigned exploration project. Do not silently turn a new idea into a new project.
+Follow the canonical development skills and the selected project's supported repository convention for development artifacts. Working-docs does not redirect them into Obsidian or replace their lifecycle. For example, VoyagerShell's selected specification is docs/SPEC.md; its plan is tasks/plan.md and its default task list is tasks/todo.md. A designated external tracker remains an upstream-supported option. Keep the todo list associated with its active plan; status.md is a resume pointer, not another task ledger.
 
-### 2. Select the authoritative artifact
+If an older local instruction sends these artifacts to Obsidian, identify the conflict and request or propose a bounded reconciliation with its owner. Do not silently override instructions, migrate existing specifications, or change the upstream path validator, completion ordering, approval gates or retention rules. An explicit user decision resolves the named conflict only.
 
-Use the project's declared layout. The default layout, when adopted by a project, is:
+### 2. Select the human-facing document and destination
 
-| Purpose | Existing destination | Authority and format |
+Use the project's approved Obsidian layout. Common destinations are:
+
+| Purpose | Destination | Format |
 |---|---|---|
-| Understand an existing or proposed system; walkthrough or review | explainer/ | HTML for explainers and reviews intended for Isaac to read; otherwise the owning skill's format |
-| Define agreed behavior and contracts; UX requirements and code sketches | specs/ | The specification skill's format; linked native code and UX artifacts |
-| Break an agreed specification into tasks | plans/ | The planning skill's format, or the project's declared external tracker |
-| Investigate a question or compare approaches | research/ | HTML findings; Markdown run instructions only when needed; linked raw evidence in its native format |
-| Resume current work | status.md at the project documentation root | Markdown current state and links |
-| Record what happened and why | log.md at the project documentation root | Markdown dated history and links |
+| Walkthrough, explanation or review | explainer/ | HTML |
+| Research or comparison | research/ | HTML, with linked evidence in its native format |
+| Project navigation and resume point | status.md at the documentation root | Markdown |
+| Dated decisions and completed work | log.md at the documentation root | Markdown, newest first |
 
-The table does not authorize creating missing directories. Reviews use explainer/ with a review suffix under this layout; surface the mismatch if the project's established convention differs.
+This table does not authorize new directories. Existing Obsidian specs/ and plans/ may contain historical documents or other agreed material; their existence is not a rule for placing new development artifacts there. Leave existing documents in place unless a migration is requested.
 
-HTML is the default for documents Isaac reads, including explainers, elucidate outputs and research findings. Specifications and plans keep their owning skill's format. Other agent-facing deliverables also follow their owning skill; agent instructions, status and log are Markdown. Code, schemas, drawings and measurements retain their native formats and are linked as evidence rather than rewritten as prose.
+If the project, purpose or destination is unclear, resolve that before writing. Do not invent a category, project or substitute folder. Do not ask again when the user has already authorized the destination. For an idea without a project, use the explicitly assigned exploration project.
 
-Do not create HTML copies of specifications or plans by default, even when Isaac will read them. If he explicitly requests a separate reading view, derive it from the authoritative source and identify that source's revision or hash. Never maintain two independent editable specifications. Author human-facing explainers and research directly in HTML without an unused Markdown twin.
+### 3. Write with the content skill
 
-### 3. Write the content with its owning skill
+Use the appropriate elucidation, research or review skill for substance, and the writing guidance for clarity. Human-facing explainers and research use HTML by default. Agent instructions remain Markdown; code, schemas and measurements retain their native formats. Working-docs does not choose architecture, produce a development plan, execute tasks or change review standards.
 
-Use the selected specification, planning, elucidation, research or review procedure. This skill controls document placement, authority and format; it does not replace those procedures.
+Link to the authoritative specification, plan, task list or tracker. Do not reproduce requirements as a second editable contract, maintain another completion checklist, or treat a status summary as task completion evidence. A human-facing summary may explain the outcome and link to its owner.
 
-Preserve upstream skills. When their default paths conflict with the project's explicit output policy, follow the project policy and state the deviation. If the conflict would change the actual workflow, ask before proceeding.
+Do not create HTML copies of development specs or plans by default. If the user explicitly requests a reading view, derive it from the authoritative artifact, identify its source revision and say where edits belong. Avoid an unused Markdown twin of a human-facing HTML report.
 
-Keep project commands and standing conventions in project instructions, behavioral requirements in the specification, scheduling and task state in the plan, and current resume information in status. Reference the owner instead of copying its content. Clearly mark examples, proposals, accepted decisions, observed results and unresolved questions.
+### 4. Keep evidence and navigation usable
 
-### 4. Make the document traceable and usable
+Give documents clear names and state their project, purpose and status. Distinguish proposals, accepted decisions, observations and open questions. Update living documents in place and use version control for history.
 
-Give the document a stable, meaningful subject name. Include project, purpose, state, source revision when relevant, and links to its inputs and related artifacts. For immutable experiment evidence, include the run identifier or date. Update a living document in place; use version control for history.
+Store screenshots in a screenshots/ subfolder beside the document they support, such as research/screenshots/ or explainer/screenshots/. This evidence subfolder is part of the approved layout. Name captures so their document and purpose are clear, and use relative links. Preserve content and update links when moving existing screenshots.
 
-Store screenshot evidence in a `screenshots/` subfolder of the canonical folder containing the documents it supports, such as `research/screenshots/` or `explainer/screenshots/`. Keep document files in the parent folder. Name each screenshot so its document and capture are identifiable, and link it using a relative path. The `screenshots/` evidence subfolder is part of this approved layout; create it when needed within an approved canonical folder. When moving existing screenshots, preserve their contents and update document links and evidence records.
+Source and run evidence may remain with the code that owns them. Link to it rather than relocating development artifacts for a report. Keep HTML portable and usable offline where practical. Check navigation and local links; inspect the rendered result when changing layout or interaction. Identify stale derived views.
 
-Keep human HTML portable and usable offline where practical. Use readable source formatting, local assets and no required third-party scripts. Test navigation and referenced files. Verify the rendered view when changing its layout or interaction. Show when a generated view is out of date.
+Keep private transcripts and personal material out of public repositories. Public readers need accessible sources or an explicitly approved public summary.
 
-Keep private transcripts, household data and personal planning out of public repositories. A public README or PR can link only audience-accessible material; publish an explicitly approved summary when the canonical working document is private.
+### 5. Leave a concise resume point
 
-### 5. Leave one clear resume point
+Update status when the current outcome, next action or blocker changes, linking to the owning development artifacts. Record consequential decisions and completed work in log. Do not copy the plan or mark development tasks complete through this skill.
 
-Update status when the current outcome, next action or blocker changes. Record consequential decisions and completed work in log, with evidence links. Do not paste the session transcript or repeat the entire plan.
+Prepend new log entries below the title, preserving older entries. Keep log-writing guidance after the entries. In coordinated work, one assigned editor owns project status/log; other participants return findings and links to that editor.
 
-Keep log entries newest first. Add each new entry at the top, below the log title, so the latest information is immediately visible. Keep older entries intact and place any log-writing guidance after the entries.
-
-Within parallel work, one assigned editor updates the project status and log. Contributors return their results and links to that editor. This ownership convention applies regardless of the orchestration tool.
-
-Do not overwrite an incomplete plan, another writer's change or an accepted document silently. Propose supersession or archival and preserve the prior record.
+Preserve another writer's changes and incomplete work. Any change to development plans, task lists or their retention belongs to the owning development procedure.
 
 ## Common Rationalizations
 
 | Rationalization | Response |
 |---|---|
-| A new folder will make this easier to file | First establish whether the output is needed and where it belongs. |
-| A second spec will be easier for the human to read | Keep the specification in its owning skill's format. Create a separate reading view only when requested. |
-| The report is finished because it was saved | Check the reading surface, evidence and destination. |
-| Status should contain all previous progress | Status is the current resume point. History belongs in log. |
+| The user reads the spec, so it belongs in Obsidian | Readership does not change the development artifact's owner or supported path. |
+| There is a plans/ folder in the vault | An existing folder is not a new task-list convention. |
+| Status should repeat the task checklist | Link to the task list and summarize only the resume point. |
+| A prettier copy can become the contract | Keep one authoritative artifact; label explicitly requested derived views. |
 
 ## Red Flags
 
-- An unrequested HTML copy of a specification or plan, or independent copies of the same requirements.
-- An output saved outside the declared project home.
-- A new folder created without approval.
-- A private absolute path offered as a usable public PR reference.
-- A generated reading view that conceals its source or stale state.
+- Moving a repository spec, plan or task list into Obsidian through this skill.
+- Redefining build completion, commit ordering, approval gates or retention rules.
+- Duplicated requirements, checklists or task-status authority.
+- An output outside its approved documentation home, or an unrequested folder.
+- A public document linking to private local material as though readers can access it.
 
 ## Verification
 
-- The project, purpose and existing destination are explicit.
-- No unapproved directory was created.
-- Each substantive fact has an identified authoritative artifact.
-- Human-facing explainers and research use HTML; other agent-facing deliverables follow their owning skill's format.
-- Specifications and plans have no unrequested HTML copy; agent instructions, status and log are Markdown.
-- References resolve and any derived view matches its source.
-- Current status and consequential history are recorded once.
+- Human-facing documentation has an explicit owner, approved destination and appropriate format.
+- Development artifacts remain under their canonical skills and supported project convention.
+- Links to the authoritative spec, plan and task list resolve without duplicating their state.
+- No upstream development procedure, completion gate or retention rule changed.
+- Screenshots are beside their document in screenshots/; changed layouts were inspected.
+- Status and newest-first log summarize decisions without becoming another task ledger.

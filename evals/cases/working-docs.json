@@ -7,7 +7,7 @@
         "top_k": 3
       },
       {
-        "prompt": "Check the formats and canonical destinations of our project specification and plan documents.",
+        "prompt": "Choose a readable format and approved Obsidian destination for our research report.",
         "top_k": 3
       },
       {
@@ -23,6 +23,14 @@
       {
         "prompt": "Explain the modules and interfaces in this working prototype.",
         "owner": "elucidate"
+      },
+      {
+        "prompt": "Write the development specification in docs/SPEC.md.",
+        "owner": "spec-driven-development"
+      },
+      {
+        "prompt": "Implement the next task and mark it complete after verification.",
+        "owner": "incremental-implementation"
       }
     ]
   },
@@ -31,17 +39,17 @@
       "id": 1,
       "kind": "execution",
       "prompt": "Read AGENTS.md and request.md. Record the accepted change and update the resume point in the approved paths. Do not create directories. Identify any requested output without an approved destination and leave that decision open.",
-      "expected_output": "Updated canonical Markdown requirements and task plan, a concise status update, a newest-first log entry and an explicit unresolved destination, without HTML copies or extra folders.",
+      "expected_output": "Human-facing status and newest-first log link to the repository development artifacts without changing their content or task state; the unapproved slide destination remains unresolved.",
       "files": [
         "working-docs"
       ],
       "expectations": [
-        "Adds the accepted 100-record export limit to specs/contract.md without changing the existing selected-record and atomic-write requirements",
-        "Keeps the specification and plan in Markdown and creates no HTML copies even though the user will read them",
-        "Updates the existing task in plans/build.md without changing its ready state or unassigned owner, and links it from status",
-        "Prepends the new decision below the log title and preserves the older entry",
-        "Does not create slides/ or another unapproved substitute destination",
-        "Reports the unresolved slide-deck request rather than silently dropping it"
+        "Links status to docs/SPEC.md, tasks/plan.md and tasks/todo.md without copying the checklist",
+        "Leaves the accepted specification, implementation plan and task list byte-identical",
+        "Records the accepted 100-record limit as a human-facing decision, linking to the specification rather than creating another contract",
+        "Prepends the log entry below the title and preserves the old entry",
+        "Creates no HTML copies of development artifacts and no new directories",
+        "Reports the unresolved slide-deck destination"
       ]
     }
   ]
