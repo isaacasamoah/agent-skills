@@ -1,0 +1,47 @@
+{
+  "skill_name": "rust-best-practices",
+  "trigger": {
+    "positive": [
+      {
+        "prompt": "Write a Rust function that borrows its input instead of cloning it.",
+        "top_k": 3
+      },
+      {
+        "prompt": "Refactor a Rust module to use ownership and typed errors.",
+        "top_k": 3
+      },
+      {
+        "prompt": "Implement an idiomatic Rust API and inspect its Cargo toolchain.",
+        "top_k": 3
+      }
+    ],
+    "negative": [
+      {
+        "prompt": "Plan implementation tasks from this approved specification.",
+        "owner": "planning-and-task-breakdown"
+      },
+      {
+        "prompt": "Make this browser dialog accessible to keyboard users.",
+        "owner": "frontend-ui-engineering"
+      }
+    ]
+  },
+  "evals": [
+    {
+      "id": 1,
+      "kind": "execution",
+      "prompt": "In rust-best-practices/, change first_word to borrow &str and return Option<&str> without allocating, preserving first-word and empty-input behavior. Use the Rust specialist alongside the general implementation and testing skills. Add focused tests and run the crate checks. Keep the supported Rust version and existing lint policy; do not copy a lint preset or invent a measured speedup.",
+      "expected_output": "A scoped Rust result applying specialist guidance within the general workflow, with evidence and honest tool results.",
+      "files": [
+        "rust-best-practices"
+      ],
+      "expectations": [
+        "Uses &str input and Option<&str> output without cloning or allocating the returned word",
+        "Covers both a normal multi-word input and empty or whitespace-only input",
+        "Runs the fixture crate tests and reports actual results",
+        "Keeps the declared Rust version and does not introduce a lint preset or unrelated dependencies",
+        "Distinguishes removal of an allocation from an unmeasured runtime performance improvement"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "skill_name": "rust-review",
+  "trigger": {
+    "positive": [
+      {
+        "prompt": "Review this Rust diff for panics and unsound API design.",
+        "top_k": 3
+      },
+      {
+        "prompt": "Audit a Rust crate and prioritize error-handling defects.",
+        "top_k": 3
+      },
+      {
+        "prompt": "Check my Rust module and explain which language-specific findings must be fixed.",
+        "top_k": 3
+      }
+    ],
+    "negative": [
+      {
+        "prompt": "Plan implementation tasks from this approved specification.",
+        "owner": "planning-and-task-breakdown"
+      },
+      {
+        "prompt": "Make this browser dialog accessible to keyboard users.",
+        "owner": "frontend-ui-engineering"
+      }
+    ]
+  },
+  "evals": [
+    {
+      "id": 1,
+      "kind": "execution",
+      "prompt": "Review rust-review/src/lib.rs as a Rust library using the Rust specialist alongside the general review skill. Write REVIEW.md in the existing fixture directory. Do not edit the source or Cargo.toml. Report actual checks and do not claim measured performance improvements. After writing REVIEW.md, print its full contents so the review itself is visible in the execution trace.",
+      "expected_output": "A scoped Rust result applying specialist guidance within the general workflow, with evidence and honest tool results.",
+      "files": [
+        "rust-review"
+      ],
+      "expectations": [
+        "Identifies the reachable panic from parsing untrusted input and proposes a fallible return type",
+        "Identifies the borrowed &String parameter and proposes &str",
+        "Cites concrete source locations and Rust rules and prioritizes the panic above style",
+        "Leaves the source and Cargo.toml unchanged and integrates language findings into a general systematic review",
+        "Reports checks actually run and does not claim unmeasured performance gains"
+      ]
+    }
+  ]
+}
