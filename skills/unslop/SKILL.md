@@ -14,6 +14,7 @@ Read [Lauren Tan's original Unslop rules](../../external-skills/unslop/SKILL.md)
 ## When to Use
 
 - Before drafting a substantial human-facing review, explanation or document.
+- For every pull request title and description, alongside the developer writing guidelines and the [PR-description standard](../../references/pr-descriptions.md).
 - After drafting, or when editing existing prose that sounds inflated, verbose or hard to understand.
 - When the user asks to unslop or identifies a confusing title or passage.
 

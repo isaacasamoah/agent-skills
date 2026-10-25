@@ -14,6 +14,18 @@ Use the existing specification's acceptance criteria to name the required journe
 
 Exercise the real user surface for user journeys. Service responses and logs can corroborate the result but cannot substitute for the interaction being claimed. Name simulated or unavailable surfaces explicitly. When consolidating runners, prove that the accepted journeys still work before removing their old implementations. Start with the active change, not a rewrite of historical tests.
 
+## Keep tests focused, readable and justified
+
+Apply this section whenever writing or reviewing tests. Give each test one clear behaviour to prove and a named failure it should catch. Explain why that check is needed for this change, through its name and a short comment or review explanation where the reason is not obvious. Match its scope to the changed behaviour and risk; nearby code is not a reason to add broad checks.
+
+One purpose does not mean one assertion. Several checkpoints may prove a single journey, such as submitting a request, matching its answer to that request and seeing it in the interface. Separate unrelated behaviours. When two tests or test levels overlap, identify the distinct failure each detects or remove the redundant check while preserving necessary proof.
+
+Keep feature scenarios easy to follow and files short enough to understand. There is no fixed file-length limit. Reuse the maintained application fixture for common setup, input, observation and cleanup. Extract helpers when they remove repetition or clarify a responsibility, not to hide volume. Moving code between files does not reduce the combined test count.
+
+Identify discovery-only diagnostics that no longer contribute to acceptance. Retire them through the normal review and removal procedure, preserving useful evidence. Temporary scripts used to accept the current change still count even if removed afterward. Do not remove effective failure checks, compress formatting or weaken a journey to make tests shorter.
+
+State exactly what each observation proves. For example, an output-audio peak establishes that sound reached the output; it does not establish that both an acknowledgement and the final answer were intelligible. Preserve that distinction in the test, review and PR description.
+
 ## Keep acceptance code within the test budget
 
 Authored tests and proving code used for acceptance must not exceed the production code they actually exercise. This is a size constraint checked in review, not a coverage metric or evidence of correctness.

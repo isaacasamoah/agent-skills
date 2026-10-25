@@ -1,5 +1,7 @@
 # Isaac's additions
 
+On 25 October 2026 Isaac approved PR-2026-10-25 and TEST-2026-10-25 for the next VoyagerShell builds. The [PR-description reference](references/pr-descriptions.md) provides the agreed evidence structure, Unslop checks and GitHub CLI body/readback procedure. The existing [application-proof reference](references/application-proof.md) now includes focused test purposes, justified checks, readable files and honest evidence limits. Home instructions route these tasks to the references; the local Unslop entry explicitly includes every PR title and description. Upstream skill procedures, the complete test-size budget and application source remain unchanged. This is a trial release, not evidence of future writing or testing quality.
+
 On 25 October 2026 Isaac approved a trial of [application proof](references/application-proof.md): one maintained, versioned fixture per application and a review gate limiting authored acceptance code to the production behavior exercised. A home-instruction pointer loads the reference for user-facing application work; project CONSTRAINTS.md owns concrete scope and commands. This adds no skill and changes no upstream procedure. The next VoyagerShell build is the first intended behavioral trial. Installation checks do not establish effectiveness.
 
 The upstream skill files are preserved at aeac41d4d005999432bb7312f7ff06383a91d59d. The four discovery skills and their evidence were adopted at e38d2dae7b496a838cf18b4718f2aaa9be3c1fcf.
