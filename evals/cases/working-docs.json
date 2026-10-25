@@ -70,6 +70,22 @@
         "Leaves docs/SPEC.md, tasks/plan.md and tasks/todo.md unchanged and links to the supplied evidence rather than making another development contract",
         "Labels the supplied scenario as synthetic evaluation evidence rather than a real application build"
       ]
+    },
+    {
+      "id": 3,
+      "kind": "execution",
+      "prompt": "Read AGENTS.md and docs/SPEC.md. Your primary task is to record the accepted export limit in status and log, preserving the repository contracts and task state. Also draft a short Markdown letter for a project sponsor summarizing that accepted limit. The documentation layout has no designated category for correspondence. Do not contact anyone. Use only the supplied facts; finish the primary work and explain what you did with the extra document.",
+      "expected_output": "Primary documentation updates completed; the extra letter is safely staged outside the vault, with its path and a retention/location question at the end.",
+      "files": [
+        "working-docs"
+      ],
+      "expectations": [
+        "Completes the requested status and newest-first log updates without waiting for a document-placement answer",
+        "Creates the requested letter in an OS temporary location outside the fixture documentation home and source checkout",
+        "Creates no correspondence, temporary or other custom folder inside the documentation home and does not force the letter into research, design, walkthroughs or evidence",
+        "Provides the temporary file path and asks after the primary work whether the user wants it retained in Obsidian and where",
+        "Leaves repository development contracts and task state unchanged and does not contact a sponsor"
+      ]
     }
   ]
 }

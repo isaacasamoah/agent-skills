@@ -37,7 +37,7 @@ If an older local instruction sends these artifacts to Obsidian, identify the co
 
 ### 2. Select the human-facing document and destination
 
-Use the project's approved Obsidian layout. Common destinations are:
+Use only the project's designated Obsidian layout:
 
 | Purpose | Destination | Format |
 |---|---|---|
@@ -47,11 +47,13 @@ Use the project's approved Obsidian layout. Common destinations are:
 | Project navigation and resume point | status.md at the documentation root | Markdown |
 | Dated decisions and completed work | log.md at the documentation root | Markdown, newest first |
 
-For these project documentation homes, `research/`, `explainer/design/`, `explainer/walkthroughs/` and each document's `screenshots/` evidence folder are the approved writing destinations. Keep the existing singular `explainer/` name. Name documents for their subject and purpose, such as `voice-design.html` or `voice-build-walkthrough.html`; include a date for a specific run or snapshot. Research gathers evidence or compares options before a choice; a design explainer communicates the intended choice. A walkthrough explains implemented behavior and evidence, but is not a second specification. Link underlying technical review results from the walkthrough; keep their native format and owning procedure.
+For these project documentation homes, `research/`, `explainer/design/`, `explainer/walkthroughs/` and their `evidence/` folders are the approved writing destinations. Keep canonical documents directly in their category; do not create topic, date, task or document folders. Keep the existing singular `explainer/` name. Name documents for their subject and purpose, such as `voice-design.html` or `voice-build-walkthrough.html`; include a date for a specific run or snapshot. Research gathers evidence or compares options before a choice; a design explainer communicates the intended choice. A walkthrough explains implemented behavior and evidence, but is not a second specification. Link underlying technical review results from the walkthrough; keep their native format and owning procedure.
 
 Old Obsidian `specs/` and `plans/` belong under `archive/specs/` and `archive/plans/`. Keep them findable through an archive link in project status, preserve their contents and repair moved links. These archived documents are historical context, not active development contracts. Archive only with user authorization; do not move repository-owned specs or plans. This does not authorize reorganizing unrelated project folders or automatically recategorizing existing explainers.
 
-If the project, purpose or destination is unclear, resolve that before writing. Do not invent a category, project or substitute folder. Do not ask again when the user has already authorized the destination. For an idea without a project, use the explicitly assigned exploration project.
+If a needed human-facing document has no designated home, draft it in an OS temporary location outside Obsidian and the source checkout. Do not create another vault folder, force it into an unrelated category or select a substitute project. Continue and finish the primary task. At the end, give the temporary file path and ask whether the user wants it retained in Obsidian and, if so, where. Keep the temporary file until that decision; silence is not approval to move or delete it. Do not interrupt the primary task just to resolve optional document placement.
+
+A new persistent folder requires an explicit user decision; mentioning it in an agent's plan is not authorization. Existing nonstandard folders do not authorize new ones. Do not ask again for a location the user has already designated. This temporary-document fallback does not replace repository specifications, plans, constraints or required development evidence. For an idea without a project, use the explicitly assigned exploration project.
 
 ### 3. Write with the content skill
 
@@ -67,7 +69,9 @@ Do not create HTML copies of development specs or plans by default. If the user 
 
 Give documents clear names and state their project, purpose and status. Distinguish proposals, accepted decisions, observations and open questions. Update living documents in place and use version control for history.
 
-Store screenshots in a screenshots/ subfolder beside the document they support, such as research/screenshots/, explainer/design/screenshots/ or explainer/walkthroughs/screenshots/. This evidence subfolder is part of the approved layout. Name captures so their document and purpose are clear, and use relative links. Preserve content and update links when moving existing screenshots.
+Put screenshots and other supporting artifacts in `evidence/` within the relevant category: `research/evidence/`, `explainer/design/evidence/` or `explainer/walkthroughs/evidence/`. Each item must support a named canonical document and be linked or identified there. Include the document's name in supporting filenames. Evidence is not a place for unrelated notes, spare reports, authoritative development contracts or arbitrary files. Do not create further topic or task folders; explicitly preserved historical bundles are not a precedent for new layouts. Keep source and run evidence with its code owner when it already has an appropriate home.
+
+Only `design/` and `walkthroughs/` are categories directly under `explainer/`. Preserve content and repair links during an explicitly authorized reorganization. Historical material without a canonical document to support belongs in an authorized archive, not in an evidence folder. A new unclassified document uses the temporary-document process above.
 
 Source and run evidence may remain with the code that owns them. Link to it rather than relocating development artifacts for a report. Keep HTML portable and usable offline where practical. Check navigation and local links; inspect the rendered result when changing layout or interaction. Identify stale derived views.
 
@@ -87,6 +91,8 @@ Preserve another writer's changes and incomplete work. Any change to development
 |---|---|
 | The user reads the spec, so it belongs in Obsidian | Readership does not change the development artifact's owner or supported path. |
 | There is a plans/ folder in the vault | An existing folder is not a new task-list convention. |
+| This task needs its own folder | Use the designated layout; stage an unclassified document temporarily and ask after the primary task. |
+| Any file can go in evidence | Identify the canonical document it supports; otherwise it does not belong there. |
 | Status should repeat the task checklist | Link to the task list and summarize only the resume point. |
 | A prettier copy can become the contract | Keep one authoritative artifact; label explicitly requested derived views. |
 
@@ -104,5 +110,6 @@ Preserve another writer's changes and incomplete work. Any change to development
 - Development artifacts remain under their canonical skills and supported project convention.
 - Links to the authoritative spec, plan and task list resolve without duplicating their state.
 - No upstream development procedure, completion gate or retention rule changed.
-- Screenshots are beside their document in screenshots/; changed layouts were inspected.
+- Supporting artifacts are in the relevant evidence/ folder and have a named canonical document; changed layouts were inspected.
+- Unclassified documents remain temporary, with retention raised only after the primary task is finished.
 - Status and newest-first log summarize decisions without becoming another task ledger.

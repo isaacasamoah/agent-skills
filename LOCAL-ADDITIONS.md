@@ -1,5 +1,7 @@
 # Isaac's additions
 
+On 26 October 2026 Isaac restricted Obsidian output to designated folders. Unclassified human-facing documents are staged in OS temporary storage, with retention/location discussed after the primary task. Supporting screenshots and native artifacts use evidence/ in their canonical document's category; unrelated files do not qualify as evidence. Existing explainer contents are reorganized into design/ and walkthroughs/ with link preservation.
+
 On 26 October 2026 Isaac chose “walkthrough” as the consistent name for the plain-language digest of each build, verification and review loop, including small PRs and correction rounds. Working-docs loads [the walkthrough standard](references/build-walkthrough.md); home instructions select it after each loop. The canonical destination is `explainer/walkthroughs/`, superseding the initial `explainer/reviews/` label in the dated entry below. This is a presentation standard, not another skill or an alteration to development, review or acceptance procedures. Correction rounds update the same walkthrough.
 
 On 26 October 2026, working-docs distinguishes proposed design/architecture in `explainer/design/`, implemented-system walkthroughs and verification/review in `explainer/reviews/`, and investigations/comparisons in `research/`. At Isaac's direction all eight projects' old Obsidian specs/plans are archived. Repository development artifact ownership is unchanged.
