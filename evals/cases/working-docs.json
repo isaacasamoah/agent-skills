@@ -49,7 +49,8 @@
         "Records the accepted 100-record limit as a human-facing decision, linking to the specification rather than creating another contract",
         "Prepends the log entry below the title and preserves the old entry",
         "Creates no HTML copies of development artifacts and no new directories",
-        "Reports the unresolved slide-deck destination"
+        "Reports the unresolved slide-deck destination",
+        "Routes proposed design or architecture to explainer/design/, implemented walkthroughs and build/verification reviews to explainer/reviews/, research comparisons to research/, and historical Obsidian specs/plans to archive/ without treating them as active repository contracts"
       ]
     }
   ]
