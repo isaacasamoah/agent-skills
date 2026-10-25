@@ -50,7 +50,25 @@
         "Prepends the log entry below the title and preserves the old entry",
         "Creates no HTML copies of development artifacts and no new directories",
         "Reports the unresolved slide-deck destination",
-        "Routes proposed design or architecture to explainer/design/, implemented walkthroughs and build/verification reviews to explainer/reviews/, research comparisons to research/, and historical Obsidian specs/plans to archive/ without treating them as active repository contracts"
+        "Routes proposed design or architecture to explainer/design/, implemented walkthroughs and build/verification walkthroughs to explainer/walkthroughs/, research comparisons to research/, and historical Obsidian specs/plans to archive/ without treating them as active repository contracts"
+      ]
+    },
+    {
+      "id": 2,
+      "kind": "execution",
+      "prompt": "Read AGENTS.md and walkthrough-input.md. This is a small PR, but it still needs the standard walkthrough. Create explainer/walkthroughs/export-limit-walkthrough.html; this request authorizes that directory. Use only the supplied facts and leave the development contract, plan and task list unchanged. Read back the finished HTML so its contents are visible in the execution trace. Do not run the application or claim new verification.",
+      "expected_output": "A short, clear HTML walkthrough that explains the change, build/review cycle, actual skill use, evidence limits and manual inspection, linked to the owning evidence.",
+      "files": [
+        "working-docs"
+      ],
+      "expectations": [
+        "Writes the walkthrough in explainer/walkthroughs/ for this small change, with an understandable title and before/after behavior",
+        "Explains the review finding, the single correction and successful re-review without claiming that review alone proves the UI",
+        "Connects the recorded skills to concrete actions and reasons rather than listing an assumed full catalog",
+        "Preserves three passing service checks, the absent real-UI proof and unpublished/uninstalled state without claiming new checks or approval",
+        "Gives human inspection steps for 100 and 101 records with their expected visible outcomes",
+        "Leaves docs/SPEC.md, tasks/plan.md and tasks/todo.md unchanged and links to the supplied evidence rather than making another development contract",
+        "Labels the supplied scenario as synthetic evaluation evidence rather than a real application build"
       ]
     }
   ]

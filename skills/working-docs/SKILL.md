@@ -42,12 +42,12 @@ Use the project's approved Obsidian layout. Common destinations are:
 | Purpose | Destination | Format |
 |---|---|---|
 | Proposed UX, design or architecture: what we intend to build and why | explainer/design/ | HTML |
-| Implemented-system walkthrough, build/verification evidence or review: what exists and whether it meets the intent | explainer/reviews/ | HTML |
+| Implemented-system walkthrough and build/verification walkthrough: what exists, how it was checked and what to try | explainer/walkthroughs/ | HTML |
 | Research or comparison | research/ | HTML, with linked evidence in its native format |
 | Project navigation and resume point | status.md at the documentation root | Markdown |
 | Dated decisions and completed work | log.md at the documentation root | Markdown, newest first |
 
-For these project documentation homes, `research/`, `explainer/design/`, `explainer/reviews/` and each document's `screenshots/` evidence folder are the approved writing destinations. Keep the existing singular `explainer/` name. Name documents for their subject and purpose, such as `voice-design.html` or `voice-build-review.html`; include a date for a specific run or snapshot. Research gathers evidence or compares options before a choice; a design explainer communicates the intended choice. A review may compare that intent with implemented behavior, but is not a second specification.
+For these project documentation homes, `research/`, `explainer/design/`, `explainer/walkthroughs/` and each document's `screenshots/` evidence folder are the approved writing destinations. Keep the existing singular `explainer/` name. Name documents for their subject and purpose, such as `voice-design.html` or `voice-build-walkthrough.html`; include a date for a specific run or snapshot. Research gathers evidence or compares options before a choice; a design explainer communicates the intended choice. A walkthrough explains implemented behavior and evidence, but is not a second specification. Link underlying technical review results from the walkthrough; keep their native format and owning procedure.
 
 Old Obsidian `specs/` and `plans/` belong under `archive/specs/` and `archive/plans/`. Keep them findable through an archive link in project status, preserve their contents and repair moved links. These archived documents are historical context, not active development contracts. Archive only with user authorization; do not move repository-owned specs or plans. This does not authorize reorganizing unrelated project folders or automatically recategorizing existing explainers.
 
@@ -57,6 +57,8 @@ If the project, purpose or destination is unclear, resolve that before writing. 
 
 Use the appropriate elucidation, research or review skill for substance, and the writing guidance for clarity. Human-facing explainers and research use HTML by default. Agent instructions remain Markdown; code, schemas and measurements retain their native formats. Working-docs does not choose architecture, produce a development plan, execute tasks or change review standards.
 
+For every build, verification and review loop, including small changes, corrections and blocked outcomes, read the [build-walkthrough standard](../../references/build-walkthrough.md). It defines the human-facing account of changes, skills, review, evidence, limitations and inspection steps. The selected development workflow still owns the work and its acceptance criteria.
+
 Link to the authoritative specification, plan, task list or tracker. Do not reproduce requirements as a second editable contract, maintain another completion checklist, or treat a status summary as task completion evidence. A human-facing summary may explain the outcome and link to its owner.
 
 Do not create HTML copies of development specs or plans by default. If the user explicitly requests a reading view, derive it from the authoritative artifact, identify its source revision and say where edits belong. Avoid an unused Markdown twin of a human-facing HTML report.
@@ -65,7 +67,7 @@ Do not create HTML copies of development specs or plans by default. If the user 
 
 Give documents clear names and state their project, purpose and status. Distinguish proposals, accepted decisions, observations and open questions. Update living documents in place and use version control for history.
 
-Store screenshots in a screenshots/ subfolder beside the document they support, such as research/screenshots/, explainer/design/screenshots/ or explainer/reviews/screenshots/. This evidence subfolder is part of the approved layout. Name captures so their document and purpose are clear, and use relative links. Preserve content and update links when moving existing screenshots.
+Store screenshots in a screenshots/ subfolder beside the document they support, such as research/screenshots/, explainer/design/screenshots/ or explainer/walkthroughs/screenshots/. This evidence subfolder is part of the approved layout. Name captures so their document and purpose are clear, and use relative links. Preserve content and update links when moving existing screenshots.
 
 Source and run evidence may remain with the code that owns them. Link to it rather than relocating development artifacts for a report. Keep HTML portable and usable offline where practical. Check navigation and local links; inspect the rendered result when changing layout or interaction. Identify stale derived views.
 
