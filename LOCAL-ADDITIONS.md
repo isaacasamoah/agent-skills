@@ -1,5 +1,7 @@
 # Isaac's additions
 
+On 25 October 2026 Isaac approved a trial of [application proof](references/application-proof.md): one maintained, versioned fixture per application and a review gate limiting authored acceptance code to the production behavior exercised. A home-instruction pointer loads the reference for user-facing application work; project CONSTRAINTS.md owns concrete scope and commands. This adds no skill and changes no upstream procedure. The next VoyagerShell build is the first intended behavioral trial. Installation checks do not establish effectiveness.
+
 The upstream skill files are preserved at aeac41d4d005999432bb7312f7ff06383a91d59d. The four discovery skills and their evidence were adopted at e38d2dae7b496a838cf18b4718f2aaa9be3c1fcf.
 
 On 21 October 2026 Isaac retired design-interview for a trial of upstream idea-refine. Its skill and evaluation are preserved in ~/Archive/skills/design-interview-20261021, with restoration instructions, and in Git history. The active catalog contains three discovery additions. The upstream idea-refine, interview-me and code-review-and-quality skills are unchanged.
