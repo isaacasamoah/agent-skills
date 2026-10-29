@@ -1,5 +1,7 @@
 # Isaac's additions
 
+On 29 October 2026 Isaac superseded repository done/ and tasks/done/ for new task documents. Specs and modules live at the selected worktree root; plans and checklists live in its tasks/. Keep these documents out of commits and the primary checkout. After merge and accepted completion, preserve them in the canonical Obsidian project's spec-history/ before worktree cleanup. The [completed-work reference](references/completed-work.md) owns exact exclusions, collision checks and link repair. Existing tracked documents need a separate migration decision. Human-facing done destinations remain unchanged.
+
 On 29 October 2026 Isaac requested separate Before and After headings in every PR description, including small changes. The [PR-description reference](references/pr-descriptions.md) owns this presentation rule. Review, evidence and merge requirements remain unchanged.
 
 On 29 October 2026 Isaac added a done convention for accepted completed features and project phases. Obsidian keeps completed explainers and research under the owning project's done/ tree. Repositories keep completed specifications in done/ and completed plans/tasks in tasks/done/. The [completed-work reference](references/completed-work.md) owns the destinations and link/evidence reconciliation alongside worktree cleanup. Incomplete work and existing approval gates are preserved. This does not bulk-migrate existing archives or infer completion from merged branches.

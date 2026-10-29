@@ -31,7 +31,7 @@ Read the project's instructions and declared documentation root. Search the exis
 | Branches, worktrees, commits and releases | [git-workflow-and-versioning](../git-workflow-and-versioning/SKILL.md) |
 | Human-facing walkthroughs, research, review presentation, navigation, status and log | This skill, with the content skill that produces the explanation or review |
 
-Follow the canonical development skills and the selected project's supported repository convention for development artifacts. Working-docs does not redirect them into Obsidian or replace their lifecycle. For example, VoyagerShell's selected specification is docs/SPEC.md; its plan is tasks/plan.md and its default task list is tasks/todo.md. A designated external tracker remains an upstream-supported option. Keep the todo list associated with its active plan; status.md is a resume pointer, not another task ledger.
+Follow the canonical development skills and the selected project's supported repository convention for development artifacts. Working-docs does not redirect them into Obsidian or replace their lifecycle. For the approved worktree-local convention, the selected task worktree holds SPEC.md, its spec modules, tasks/plan.md and tasks/todo.md; the [completed-work reference](../../references/completed-work.md) owns exclusion from commits and the move to Obsidian spec-history/ after merge. A designated external tracker remains an upstream-supported option. Keep the todo list associated with its active plan; status.md is a resume pointer, not another task ledger.
 
 If an older local instruction sends these artifacts to Obsidian, identify the conflict and request or propose a bounded reconciliation with its owner. Do not silently override instructions, migrate existing specifications, or change the upstream path validator, completion ordering, approval gates or retention rules. An explicit user decision resolves the named conflict only.
 
@@ -49,9 +49,9 @@ Use only the project's designated Obsidian layout:
 
 For these project documentation homes, `research/`, `explainer/design/`, `explainer/walkthroughs/` and their `evidence/` folders are the approved writing destinations. Keep canonical documents directly in their category; do not create topic, date, task or document folders. Keep the existing singular `explainer/` name. Name documents for their subject and purpose, such as `voice-design.html` or `voice-build-walkthrough.html`; include a date for a specific run or snapshot. Research gathers evidence or compares options before a choice; a design explainer communicates the intended choice. A walkthrough explains implemented behavior and evidence, but is not a second specification. Link underlying technical review results from the walkthrough; keep their native format and owning procedure.
 
-Old Obsidian `specs/` and `plans/` belong under `archive/specs/` and `archive/plans/`. Keep them findable through an archive link in project status, preserve their contents and repair moved links. These archived documents are historical context, not active development contracts. Archive only with user authorization; do not move repository-owned specs or plans. This does not authorize reorganizing unrelated project folders or automatically recategorizing existing explainers.
+Old Obsidian `specs/` and `plans/` belong under `archive/specs/` and `archive/plans/`. Keep them findable through an archive link in project status, preserve their contents and repair moved links. These archived documents are historical context, not active development contracts. Archive only with user authorization. The approved worktree-local spec-history convention below is a separate, explicit destination for completed task documents. This does not authorize reorganizing unrelated project folders or automatically recategorizing existing explainers.
 
-For an accepted completed feature or phase, use the [completed-work convention](../../references/completed-work.md). Its approved Obsidian destinations are `done/explainer/design/`, `done/explainer/walkthroughs/` and `done/research/`, with supporting `evidence/` inside each category. Reconcile documents and their links alongside worktree cleanup. These are completion destinations, not new active categories. Repository artifacts retain their development owners and use the repository destinations in that reference.
+For an accepted completed feature or phase, use the [completed-work convention](../../references/completed-work.md). Its approved Obsidian destinations are `done/explainer/design/`, `done/explainer/walkthroughs/` and `done/research/`, with supporting `evidence/` inside each category. Reconcile documents and their links alongside worktree cleanup. These are completion destinations, not new active categories. Task specifications, modules, plans and checklists remain owned by their development skills while active in the selected worktree. After merge and accepted completion, move them to the canonical project root's `spec-history/` under that reference; they do not enter the primary checkout. This is the designated retention exception to the ordinary research/explainer categories.
 
 If a needed human-facing document has no designated home, draft it in an OS temporary location outside Obsidian and the source checkout. Do not create another vault folder, force it into an unrelated category or select a substitute project. Continue and finish the primary task. At the end, give the temporary file path and ask whether the user wants it retained in Obsidian and, if so, where. Keep the temporary file until that decision; silence is not approval to move or delete it. Do not interrupt the primary task just to resolve optional document placement.
 
@@ -100,7 +100,7 @@ Preserve another writer's changes and incomplete work. Any change to development
 
 ## Red Flags
 
-- Moving a repository spec, plan or task list into Obsidian through this skill.
+- Moving an active spec, plan or task list into Obsidian, or archiving completed task documents outside the approved spec-history convention.
 - Redefining build completion, commit ordering, approval gates or retention rules.
 - Duplicated requirements, checklists or task-status authority.
 - An output outside its approved documentation home, or an unrequested folder.
@@ -111,7 +111,7 @@ Preserve another writer's changes and incomplete work. Any change to development
 - Human-facing documentation has an explicit owner, approved destination and appropriate format.
 - Development artifacts remain under their canonical skills and supported project convention.
 - Links to the authoritative spec, plan and task list resolve without duplicating their state.
-- No upstream development procedure, completion gate or retention rule changed.
+- Development procedures and completion gates remain intact, apart from the explicitly approved local task-document commit and retention convention in the completed-work reference.
 - Supporting artifacts are in the relevant evidence/ folder and have a named canonical document; changed layouts were inspected.
 - Unclassified documents remain temporary, with retention raised only after the primary task is finished.
 - Status and newest-first log summarize decisions without becoming another task ledger.

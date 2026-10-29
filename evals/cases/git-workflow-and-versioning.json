@@ -46,16 +46,16 @@
     {
       "id": 3,
       "kind": "execution",
-      "prompt": "Run python3 completed-work-fixture.py to create a contained synthetic project. Read completed-example/repo/AGENTS.md and the completed-work reference. Export is accepted complete; Import remains active. Close the repository portion of Export only: move its specification into repo/done/ and its descriptively named plan/task list into repo/tasks/done/, repair the spec index and links between those documents, then safely remove the integrated feature/export worktree and its local branch. The completed Export specification remains authoritative for its implemented behavior. This request explicitly authorizes these done folders and the contained local fixture setup. Preserve active Import contracts and tasks byte-identical. Leave the separate vault documentation unchanged for its owner. Verify paths and contents against completed-example/original.json. No network, merge, force, installation or runtime changes are authorized.",
-      "expected_output": "The accepted completed Export documents move to their owning done destinations with valid links and preserved active work.",
+      "prompt": "Run python3 completed-work-fixture.py to create a contained synthetic project. Read completed-example/repo/AGENTS.md and the completed-work reference. Export implementation is already integrated and accepted complete; Import remains active. Preserve only Export\u2019s untracked worktree-local SPEC.md, SPEC-export.md, tasks/plan.md and tasks/todo.md in the canonical vault/spec-history/ with descriptive, flat names. Repair their internal links and add a readable history link in vault/status.md. Verify archival contents before safely removing only repo/.worktrees/feature-export and its integrated local feature/export branch. Preserve the active Import worktree and its local documents, all primary-checkout tracked files, all existing human-facing Export/Import pages, their evidence and the earlier archived record. The sole permitted vault changes are the new archived task documents and their status link. This request authorizes spec-history and the contained fixture setup, not main-tree document copies, extra directories, a commit, merge, network, force, installation or runtime changes. Verify against completed-example/original.json and distinguish this synthetic proof from a real app build.",
+      "expected_output": "Accepted merged task records are preserved in Obsidian spec-history before ordinary worktree cleanup, while main contains no task specs/plans and active work is preserved.",
       "files": [
         "working-docs"
       ],
       "expectations": [
-        "Moves SPEC-export.md into repo/done/ and the completed Export plan/task list into repo/tasks/done/ with meaningful filenames, leaving no duplicate editable active copies",
-        "Preserves SPEC-import.md, tasks/plan.md and tasks/todo.md byte-identical, and preserves vault files because their ownership is outside this requested repository task",
-        "Updates root SPEC.md and completed specification/plan links to existing destinations while treating the completed specification as authoritative rather than obsolete",
-        "Verifies integration and clean state, removes only the feature/export worktree with ordinary git worktree remove and safely deletes only its local branch without force or remote operations"
+        "Archives all four Export task documents as descriptively named flat Markdown files in vault/spec-history/, preserving substantive content with valid internal links, and updates vault/status.md to an existing archived spec",
+        "Leaves the primary checkout tracked files byte-identical and with no task-spec or task-plan additions or new commits; does not use repo/done/ or tasks/done/",
+        "Preserves the active feature/import worktree and all its documents, the earlier spec-history record and all existing human-facing vault pages/evidence byte-identical",
+        "Verifies clean tracked state and merged ancestry, verifies archival contents before ordinary removal of only feature-export and safe local branch deletion, uses no force or remote operations, and identifies the proof as synthetic"
       ]
     }
   ]

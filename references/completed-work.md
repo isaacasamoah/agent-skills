@@ -1,4 +1,4 @@
-# Put completed work in done
+# Worktree task documents and completed work
 
 Use this convention when a feature or project phase has met its acceptance criteria and the user or approved workflow has accepted its completion. Reconcile its documents alongside worktree cleanup. A merged PR, an old document or a removed worktree alone does not prove the phase is complete.
 
@@ -11,14 +11,16 @@ The selected development workflow still owns verification, task completion, revi
 | Obsidian design or architecture explainer | `explainer/design/` | `done/explainer/design/` |
 | Obsidian build or system walkthrough | `explainer/walkthroughs/` | `done/explainer/walkthroughs/` |
 | Obsidian research for that feature or phase | `research/` | `done/research/` |
-| Repository feature or module specification | Repository root | `done/` at the repository root |
-| Repository plan and task list | `tasks/` | `tasks/done/` |
+| Task specification and modules | Selected worktree root | `spec-history/` in its canonical Obsidian project |
+| Task plan and checklist | Selected worktree `tasks/` | The same Obsidian `spec-history/` |
 
-Paths are relative to the owning Obsidian project or source repository. Keep only active specifications in the repository root and active plans/tasks directly in `tasks/`. A root `SPEC.md` that indexes specifications can remain as navigation, with clear links to active and completed specifications. Keep standing instructions, constraints, technical guides and current project navigation in their existing homes.
+Each task worktree owns its root `SPEC.md`, selected spec modules and `tasks/plan.md` with `tasks/todo.md`. Keep these task documents local to that worktree, outside commits and the primary checkout. Continue using the selected specification, planning, build and review skills. Where a command normally commits the plan or task-status update, this local placement convention excludes those documents from the commit; implementation commits, verification and approval gates remain required. A code rollback does not restore local planning state, so reconcile the plan and checklist against the actual code before resuming.
 
-Keep canonical documents directly in these folders. Preserve descriptive specification filenames. Rename generic plans and task lists when moving them, for example `tasks/done/connection-retry-plan.md` and `tasks/done/connection-retry-todo.md`. Do not overwrite a previous phase or create a folder per feature. An external tracker keeps its own history; do not copy it into a second task ledger.
+Before creating new task documents, check whether their paths are already tracked or occupied by inherited work. Preserve existing tracked documents and incomplete work; do not overwrite them, untrack them or rewrite history to apply this convention. Resolve that existing-document conflict with the owner first. For new untracked documents, add only their exact repository-relative paths to the common Git directory's `info/exclude`, preserving existing entries. This local ignore list is shared by the repository's worktrees; ignored files still exist for filesystem-based tools. Verify `git ls-files` does not include the selected documents and inspect staged paths before committing. Do not use forced staging for them or ignore all Markdown or the whole tasks directory.
 
-Create a done destination when it is first needed. This authorizes the listed folders and their evidence folders, not arbitrary extra categories. Existing `archive/` material stays where it is unless the user requests a separate migration. New completed work uses `done/`.
+After the implementation PR is merged and this task is accepted complete, preserve its spec, modules, plan and checklist as Markdown in `spec-history/` at the canonical Obsidian project root. Archive before removing the worktree. Do not put these records in repository `done/` or `tasks/done/`. Use flat, descriptive names prefixed by the worktree's subject, for example `voice-preservation-spec.md`, `voice-preservation-voice-module.md`, `voice-preservation-plan.md` and `voice-preservation-todo.md`. Keep internal links valid and record the merged PR or local integration evidence in project navigation. If a name already exists, compare contents and resolve a conflict before moving anything; never overwrite a previous record.
+
+Create a listed destination only when needed. This authorizes `spec-history/` and the done destinations above, with evidence folders inside the completed human-document categories, not arbitrary extra categories or a folder per feature. Keep standing instructions, constraints, technical guides and current project navigation in their existing homes. Existing tracked specs, archives and done records stay in place unless the user approves their migration. External trackers keep their own history.
 
 ## Preserve documents and links
 
@@ -28,7 +30,7 @@ Create a done destination when it is first needed. This authorizes the listed fo
 4. Verify that moved files and required evidence retain their contents, repaired targets exist and the reading view works. Keep a useful index or status/log link so completed work remains findable. Label completed work where the distinction matters.
 5. Only then remove an eligible worktree using the Git skill's checks. Preserve unique packages or evidence outside it and verify the move before removal. If work still needs a checkout, record the concrete dependency. A document mention alone calls for resolving the reference, not permanent retention.
 
-The done specification remains authoritative for the completed behavior. If a later task changes that behavior, explicitly select and move the specification back to the active location, or identify its successor and update the index. Do not treat completed specifications as obsolete or keep two editable copies. Context refresh follows the current task's selected documents; it does not load the whole done history.
+The archived specification records the accepted intent for the implemented behavior. Read it when relevant. For later changes, create the new task's worktree-local specification and link the relevant history; leave the archived record unchanged rather than maintaining two editable copies. Context refresh follows the current task's selected documents; it does not load all spec history.
 
 ## Keep cleanup proportionate
 
