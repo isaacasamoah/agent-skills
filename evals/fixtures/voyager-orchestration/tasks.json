@@ -1,0 +1,16 @@
+{
+  "A": {
+    "owner": "crew-a",
+    "turn": "turn-a",
+    "request": "req-a",
+    "output": "a-result.txt",
+    "acceptance": "contains sum=6"
+  },
+  "B": {
+    "owner": "crew-b",
+    "turn": "turn-b",
+    "request": "req-b",
+    "output": "b-result.txt",
+    "acceptance": "contains sum=9"
+  }
+}

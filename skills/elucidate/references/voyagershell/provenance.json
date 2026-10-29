@@ -1,0 +1,40 @@
+{
+  "purpose": "Frozen worked example for Elucidate; original project remains authoritative.",
+  "source_output_date": "2026-10-19",
+  "packaged_date": "2026-10-20",
+  "source_revision": "771a2f3ee2c680cf8461f850753f6cc4814c31b6",
+  "files": [
+    {
+      "source": "/home/isaac/obsidian/Projects/voyagershell/planning/reports/architecture-v0/index.html",
+      "snapshot": "index.html",
+      "source_sha256": "24eff72308fccc903933ccdff1a0233f1544ac54141d11ff9b395b8e0900d5c3",
+      "snapshot_sha256": "61d29ac01777a844ea70a84ba94d8b844a82a34d339c11b62d41e07f68ca5397"
+    },
+    {
+      "source": "/home/isaac/obsidian/Projects/voyagershell/planning/reports/architecture-v0/evidence/source-audit.json",
+      "snapshot": "evidence/source-audit.json",
+      "source_sha256": "240296342d67818af8e0b62c6a77015cc10ec8270e4bffc7563ba7cdf8fc7f9a",
+      "snapshot_sha256": "240296342d67818af8e0b62c6a77015cc10ec8270e4bffc7563ba7cdf8fc7f9a"
+    },
+    {
+      "source": "/home/isaac/obsidian/Projects/voyagershell/planning/reports/architecture-v0/evidence/browser-check.json",
+      "snapshot": "evidence/browser-check.json",
+      "source_sha256": "8e39bf80cf9fadcddfb485f971937f97b9848b29ab72d76486c3e98f58f52b31",
+      "snapshot_sha256": "8e39bf80cf9fadcddfb485f971937f97b9848b29ab72d76486c3e98f58f52b31"
+    }
+  ],
+  "changes": [
+    "Added a visible worked-example notice.",
+    "Resolved surrounding project-document links to their original local file URLs.",
+    "Architecture model, embedded source excerpts, styles and scripts are unchanged."
+  ],
+  "project_link_rewrites": {
+    "../harness-runtime/polish-voice/review.html": "file:///home/isaac/obsidian/Projects/voyagershell/planning/reports/harness-runtime/polish-voice/review.html",
+    "../../status.md": "file:///home/isaac/obsidian/Projects/voyagershell/planning/status.md",
+    "../meta-harness-design/proposal.html": "file:///home/isaac/obsidian/Projects/voyagershell/planning/reports/meta-harness-design/proposal.html",
+    "../../backlog.html": "file:///home/isaac/obsidian/Projects/voyagershell/planning/backlog.html",
+    "../../../specs/voyager-config-skills-rules-v1.html": "file:///home/isaac/obsidian/Projects/voyagershell/specs/voyager-config-skills-rules-v1.html",
+    "../handover-2026-10-19.html": "file:///home/isaac/obsidian/Projects/voyagershell/planning/reports/handover-2026-10-19.html"
+  },
+  "evidence_scope": "Copied source-audit and browser-check records are historical, not verification of this snapshot or skill. Original screenshots and browser-check script are not bundled."
+}

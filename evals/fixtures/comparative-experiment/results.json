@@ -1,0 +1,38 @@
+{
+  "fixture": "synthetic",
+  "data_kind": "constructed",
+  "sampling_unit": "source session",
+  "selection_pairs": 3,
+  "same_session": true,
+  "runs": [
+    {
+      "id": "base",
+      "k": 4,
+      "data": "selection-3",
+      "evaluator": "q1",
+      "recovered": 1,
+      "relationship_correct": 1,
+      "seconds": 4
+    },
+    {
+      "id": "longer",
+      "k": 8,
+      "data": "selection-3",
+      "evaluator": "q1",
+      "recovered": 3,
+      "relationship_correct": 1,
+      "seconds": 7
+    },
+    {
+      "id": "confounded",
+      "k": 8,
+      "data": "selection-3-plus-2",
+      "evaluator": "q2",
+      "recovered": 5,
+      "relationship_correct": 4,
+      "seconds": 8
+    }
+  ],
+  "independent_confirmation": null,
+  "worker_conclusion": "Five of five proves collaborative quality improved."
+}

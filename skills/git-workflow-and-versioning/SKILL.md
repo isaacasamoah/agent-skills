@@ -170,6 +170,8 @@ Benefits:
 - If one experiment fails, delete the worktree — nothing is lost
 - Changes are isolated until explicitly merged
 
+For an accepted completed feature or phase, reconcile its documents using the [completed-work convention](../../references/completed-work.md) alongside worktree cleanup. Resolve references and preserve unique evidence before removing their checkout. This changes completed-document placement only; it does not authorize merging, waive acceptance checks or move unfinished work.
+
 ## The Save Point Pattern
 
 ```

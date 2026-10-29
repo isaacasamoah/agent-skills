@@ -1,0 +1,47 @@
+{
+  "skill_name": "feasibility-experiment",
+  "trigger": {
+    "positive": [
+      {
+        "prompt": "Prove that docking works with an ordinary terminal, using the smallest real experiment",
+        "top_k": 3
+      },
+      {
+        "prompt": "Before building the prototype, test whether this uncertain capability is feasible on the actual desktop",
+        "top_k": 3
+      },
+      {
+        "prompt": "Run a bounded technical spike for a proof of concept, without preparing a special target",
+        "top_k": 3
+      }
+    ],
+    "negative": [
+      {
+        "prompt": "Compare two retrieval approaches on the same data and report the tradeoffs",
+        "owner": "comparative-experiment"
+      },
+      {
+        "prompt": "The app worked yesterday but now crashes on startup. Find the root cause and fix the bug.",
+        "owner": "debugging-and-error-recovery"
+      }
+    ]
+  },
+  "evals": [
+    {
+      "id": 1,
+      "kind": "execution",
+      "prompt": "Use claim.md and observations.json to assess this feasibility experiment. Produce report.html and a minimal next experiment record. Do not launch services, access a real desktop, or change the agreed claim. Identify whether the observations answer it and what evidence is missing.",
+      "expected_output": "An evidence-bound assessment that rejects prepared-target success as proof of ordinary-terminal adoption, reports missing real-surface evidence and defines the smallest valid next test.",
+      "files": [
+        "feasibility-experiment"
+      ],
+      "expectations": [
+        "The report retains ordinary independently opened terminals as a required condition, rather than accepting the specially launched window as equivalent",
+        "The original claim is not marked supported or complete because a helper receipt reports success",
+        "The report distinguishes a successful managed-window operation from unproved external-terminal adoption",
+        "The next test includes a real ordinary terminal and a known-different target, with a stopping rule and evidence requirement",
+        "No services or live desktop operations are launched and no source observations are rewritten"
+      ]
+    }
+  ]
+}
