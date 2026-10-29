@@ -6,11 +6,15 @@ Apply the developer writing guidelines and [Unslop](../skills/unslop/SKILL.md) b
 
 ## Explain the change and its evidence
 
-Use these sections as the default structure. Preserve intentional project-template requirements. For a small change, keep each section brief or combine related points without losing the information. Link detailed evidence rather than repeating the development log.
+Use these sections as the default structure. Preserve intentional project-template requirements. Always keep Before and After under separate headings, including for small changes. Other related sections may be combined without losing information. Link detailed evidence rather than repeating the development log.
 
-### Before and after
+### Before
 
-Explain the previous problem, its effect on the user and the resulting behaviour. State the actual scope of this PR. A plan or instruction change does not establish that a later application change works.
+Explain the previous behaviour or problem and its effect on the user.
+
+### After
+
+Explain the resulting behaviour and the actual scope of this PR. A plan or instruction change does not establish that a later application change works.
 
 ### Verification
 

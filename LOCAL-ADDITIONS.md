@@ -1,5 +1,7 @@
 # Isaac's additions
 
+On 29 October 2026 Isaac requested separate Before and After headings in every PR description, including small changes. The [PR-description reference](references/pr-descriptions.md) owns this presentation rule. Review, evidence and merge requirements remain unchanged.
+
 On 29 October 2026 Isaac added a done convention for accepted completed features and project phases. Obsidian keeps completed explainers and research under the owning project's done/ tree. Repositories keep completed specifications in done/ and completed plans/tasks in tasks/done/. The [completed-work reference](references/completed-work.md) owns the destinations and link/evidence reconciliation alongside worktree cleanup. Incomplete work and existing approval gates are preserved. This does not bulk-migrate existing archives or infer completion from merged branches.
 
 On 26 October 2026 Isaac restricted Obsidian output to designated folders. Unclassified human-facing documents are staged in OS temporary storage, with retention/location discussed after the primary task. Supporting screenshots and native artifacts use evidence/ in their canonical document's category; unrelated files do not qualify as evidence. Existing explainer contents are reorganized into design/ and walkthroughs/ with link preservation.
