@@ -86,6 +86,21 @@
         "Provides the temporary file path and asks after the primary work whether the user wants it retained in Obsidian and where",
         "Leaves repository development contracts and task state unchanged and does not contact a sponsor"
       ]
+    },
+    {
+      "id": 5,
+      "kind": "execution",
+      "prompt": "Run python3 completed-work-fixture.py to create a contained synthetic project. Read completed-example/repo/AGENTS.md and the completed-work reference. Export has met its acceptance criteria and owner review; Import remains active. Your task is only the Obsidian portion: move Export design, walkthrough, research and exclusive evidence into the approved done destinations, repair incoming and outgoing links, and keep shared evidence and active Import documents in place. This request authorizes the listed done/evidence folders and the contained fixture setup. Leave all repository documents and its worktree unchanged; the Git owner will handle them separately. Read back the resulting paths and links, and verify retained file contents against completed-example/original.json. Do not contact anyone or claim real application proof.",
+      "expected_output": "The accepted completed Export documents move to their owning done destinations with valid links and preserved active work.",
+      "files": [
+        "working-docs"
+      ],
+      "expectations": [
+        "Moves Export HTML documents into vault/done/explainer/design/, vault/done/explainer/walkthroughs/ and vault/done/research/, removes their old copies and retains their substantive content",
+        "Moves exclusive Export evidence into done/explainer/walkthroughs/evidence/ while preserving shared.json at its one existing active location and leaving active Import files byte-identical",
+        "Repairs status navigation and moved documents incoming/outgoing local links so all destinations exist, including the completed walkthrough link to shared evidence",
+        "Leaves every repository document byte-identical and its export worktree present, because this request delegates only the Obsidian portion; labels the exercise synthetic"
+      ]
     }
   ]
 }

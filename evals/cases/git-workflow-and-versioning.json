@@ -42,6 +42,21 @@
         "Commit messages are imperative and standalone",
         "Each commit leaves the tree in a working state"
       ]
+    },
+    {
+      "id": 3,
+      "kind": "execution",
+      "prompt": "Run python3 completed-work-fixture.py to create a contained synthetic project. Read completed-example/repo/AGENTS.md and the completed-work reference. Export is accepted complete; Import remains active. Close the repository portion of Export only: move its specification into repo/done/ and its descriptively named plan/task list into repo/tasks/done/, repair the spec index and links between those documents, then safely remove the integrated feature/export worktree and its local branch. The completed Export specification remains authoritative for its implemented behavior. This request explicitly authorizes these done folders and the contained local fixture setup. Preserve active Import contracts and tasks byte-identical. Leave the separate vault documentation unchanged for its owner. Verify paths and contents against completed-example/original.json. No network, merge, force, installation or runtime changes are authorized.",
+      "expected_output": "The accepted completed Export documents move to their owning done destinations with valid links and preserved active work.",
+      "files": [
+        "working-docs"
+      ],
+      "expectations": [
+        "Moves SPEC-export.md into repo/done/ and the completed Export plan/task list into repo/tasks/done/ with meaningful filenames, leaving no duplicate editable active copies",
+        "Preserves SPEC-import.md, tasks/plan.md and tasks/todo.md byte-identical, and preserves vault files because their ownership is outside this requested repository task",
+        "Updates root SPEC.md and completed specification/plan links to existing destinations while treating the completed specification as authoritative rather than obsolete",
+        "Verifies integration and clean state, removes only the feature/export worktree with ordinary git worktree remove and safely deletes only its local branch without force or remote operations"
+      ]
     }
   ]
 }
