@@ -170,7 +170,7 @@ Benefits:
 - If one experiment fails, delete the worktree — nothing is lost
 - Changes are isolated until explicitly merged
 
-For an accepted completed feature or phase, reconcile its documents using the [completed-work convention](../../references/completed-work.md) alongside worktree cleanup. Resolve references and preserve unique evidence before removing their checkout. This changes completed-document placement only; it does not authorize merging, waive acceptance checks or move unfinished work.
+For an accepted completed feature or phase, reconcile its documents using the [completed-work convention](../../references/completed-work.md) alongside worktree cleanup. Resolve references and preserve unique evidence before removing their checkout. For the approved local convention, keep task specs, modules, plans and checklists untracked in the selected worktree, commit implementation separately, then preserve those documents in the canonical Obsidian project's `spec-history/` after merge and accepted completion, before removing their worktree. This overrides planning-document commits for this convention only; it does not authorize merging, waive acceptance checks or move unfinished work.
 
 ## The Save Point Pattern
 
