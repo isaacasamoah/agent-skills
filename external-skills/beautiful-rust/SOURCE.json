@@ -1,12 +1,13 @@
 {
   "repository": "https://github.com/morganlinton/BeautifulRust",
-  "revision": "2b2d53a66f6f36ab4b8d6a93070183d91e77fad4",
-  "retrieved": "2026-10-26",
+  "revision": "a9cdcfa94d1330c0d41c7f67764c5f7786fbb71d",
+  "retrieved": "2026-11-01",
   "copied": [
     "skills/",
     "lints/",
     "LICENSE",
     "README.md (source attribution and upstream usage; local discovery uses the canonical skill checkout)"
   ],
-  "local_changes": "none"
+  "local_changes": "none",
+  "upstream_version": "1.5.0"
 }
