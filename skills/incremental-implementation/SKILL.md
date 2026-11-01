@@ -33,6 +33,8 @@ Build in thin vertical slices — implement one piece, test it, verify it, then 
 └──────────────────────────────────────┘
 ```
 
+For an initiative, keep the master spec/plan and required architecture context with the local task, following `context-engineering`. Before selecting a slice and when reviewing its result, name the overall acceptance criterion it advances and the remaining integrated journey. If local work stops advancing that outcome, revisit the decomposition under the existing authority; do not reset correction counts, waive gates or build on an unaccepted dependency. A passing slice is not initiative completion.
+
 For each slice:
 
 1. **Implement** the smallest complete piece of functionality

@@ -41,7 +41,9 @@ Most requests describe one capability. If this one does, skip this phase and go 
 - Acceptance criteria cluster into groups that could ship and be verified separately
 - One capability could be cut or replaced without rewriting the others' requirements
 
-**Propose a capability map before writing any spec.** Small and reviewable — a module table plus a build order, not a project plan:
+**Keep an initiative specification.** Record the overall user-visible outcome, end-to-end acceptance criteria, scope and required architecture/design references with the map in the initiative's existing spec/index. Name the implementation and evidence to reuse, with their limits. Module specs link back and identify which overall criteria they advance; the capability map does not replace this contract.
+
+**Propose a capability map before writing any module spec.** Small and reviewable — a module table plus a build order, not a project plan:
 
 ```markdown
 # Capability Map: [Initiative Name]
@@ -62,7 +64,9 @@ Build order: identity → billing, notifications → reporting
 
 **The map is gated like every phase.** The human reviews module boundaries, dependency direction, and build order before any module spec is written. Getting the map wrong is expensive; reviewing ten lines is not.
 
-**Then recurse per module.** Run Specify → Plan → Tasks → Implement for each module in dependency order. Each module gets its own spec, scoped to that module's objective, boundaries, and success criteria. Save the approved map at the project root and each module's spec alongside it, named by module id (`SPEC-identity.md`, `SPEC-billing.md`) — the map, not filename guessing, is the index of what exists.
+**Separate planning coverage from execution order.** Follow the user's requested coverage. If they ask for all module specs and plans before implementation, produce and review that set before executing. Otherwise, focused module planning may proceed incrementally within a master plan covering the whole outcome. Do not silently reduce an initiative to its first module. Preserve the applicable approval or autonomous authority for each phase.
+
+**Then execute per module.** Keep module specs focused and build in dependency order. Follow the project's document locations; where no convention exists, keep the map/index and `SPEC-<module-id>.md` together. See `context-engineering` for the required reference reading and handoff.
 
 ### Phase 1: Specify
 
@@ -255,5 +259,6 @@ Before proceeding to implementation, confirm:
 - [ ] Success criteria are specific and testable
 - [ ] Boundaries (Always/Ask First/Never) are defined
 - [ ] The spec is saved to a file in the repository
+- [ ] For an initiative, module scope still traces to the overall outcome and acceptance criteria; requested planning coverage and required references are preserved
 - [ ] If the request bundles several independently testable capabilities, a capability map (module ids, dependency direction, build order) was approved before any module spec was written
 - [ ] Every module spec traces to a module id in the approved map

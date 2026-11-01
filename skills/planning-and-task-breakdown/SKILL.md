@@ -25,12 +25,20 @@ Decompose work into small, verifiable tasks with explicit acceptance criteria. G
 
 Before writing any code, operate in read-only mode:
 
-- Read the spec and relevant codebase sections
+- Read the initiative spec, required architecture references and selected module spec, plus relevant codebase sections
 - Identify existing patterns and conventions
 - Map dependencies between components
 - Note risks and unknowns
 
 **Do NOT write code during planning.** The output is a plan document saved to `tasks/plan.md` and a task list recorded in the task list target (see Output Files; default `tasks/todo.md`), not implementation.
+
+### Keep the initiative in the plan
+
+For a multi-slice initiative, designate the existing initiative plan as the master plan. Cover the complete end goal, integrated acceptance journeys, dependencies and the path from the current working baseline to completion. Map each slice to the overall criterion it advances and show remaining work. Module plans link back; keep task status in its existing owner rather than adding another checklist.
+
+Check that proposed prerequisites are necessary for the core user journey. Prefer exercising new contracts in that journey over a separate demonstration; optional experiments and later extension behavior must not become accidental gates. Include the first usable integrated milestone, and address any requested delivery horizon before starting.
+
+Honor an explicit request to prepare all specs/plans before execution. Incremental execution does not imply incremental planning coverage. Use existing decisions, implementations and evidence; repeat a capability proof only for a stated new risk, changed assumption or required regression. A small demonstrator is useful only when its result advances the initiative.
 
 ### Step 2: Identify the Dependency Graph
 
@@ -169,7 +177,10 @@ When using an external tracker, note it in `tasks/plan.md` (e.g. "Tasks tracked 
 # Implementation Plan: [Feature/Project Name]
 
 ## Overview
-[One paragraph summary of what we're building]
+[Overall user-visible outcome; links to the initiative spec, required architecture references and any module scope]
+
+## Initiative Acceptance
+[End-to-end criteria mapped to planned slices, integration checkpoints and remaining work]
 
 ## Architecture Decisions
 - [Key decision 1 and rationale]
@@ -243,6 +254,7 @@ When multiple agents or sessions are available:
 
 Before starting implementation, confirm:
 
+- [ ] The master plan covers the full initiative; slices advance its criteria and preserve the requested planning coverage
 - [ ] Every task has acceptance criteria
 - [ ] Every task has a verification step
 - [ ] Task dependencies are identified and ordered correctly

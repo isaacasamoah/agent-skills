@@ -14,6 +14,10 @@ A standing, project-wide bar that every change must clear before it counts as do
 
 The two are complementary. A task is done only when **its** acceptance criteria are met **and** the standing Definition of Done is satisfied. Skipping either leaves work that looks finished but is not.
 
+## Initiative and slice acceptance
+
+A slice must meet its own criteria and this quality bar. An initiative also needs its overall end-to-end acceptance criteria verified across the integrated application. Passing all local checks or completing a capability map does not establish that result. The lead retains responsibility for checking the combined outcome against the initiative spec and required architecture references; delegated slice reviews do not replace that check.
+
 ## The Standing Checklist
 
 Apply this to every change before declaring it done.

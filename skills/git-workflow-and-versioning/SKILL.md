@@ -172,6 +172,12 @@ Benefits:
 
 For an accepted completed feature or phase, reconcile its documents using the [completed-work convention](../../references/completed-work.md) alongside worktree cleanup. Resolve references and preserve unique evidence before removing their checkout. For the approved local convention, keep task specs, modules, plans and checklists untracked in the selected worktree, commit implementation separately, then preserve those documents in the canonical Obsidian project's `spec-history/` after merge and accepted completion, before removing their worktree. This overrides planning-document commits for this convention only; it does not authorize merging, waive acceptance checks or move unfinished work.
 
+## Experimental source and product structure
+
+Keep exploratory source under `experiments/<name>/`, with logical subfolders where useful. Git worktrees provide isolated checkouts; they are not the product's source layout. When an approach is selected for a prototype, tracer bullet or MVP, move only the selected implementation into the agreed clean product structure, repair its imports/build paths and verify the actual application. Keep unpromoted experiments out of production entry points and packages.
+
+Preserve useful experiment history, evidence and runnable demos. Inspect active work, process/source bindings and personal files before relocating or removing anything. A promotion or cleanup step does not waive acceptance or authorize stopping another session.
+
 ## The Save Point Pattern
 
 ```
