@@ -146,8 +146,11 @@ Before looking at code, understand the intent:
 ```
 - What is this change trying to accomplish?
 - What spec or task does it implement?
+- For an initiative, which overall acceptance criterion does it advance, and which required architecture decisions govern it?
 - What is the expected behavior change?
 ```
+
+For initiative work, use the master spec/plan and required reference sections, not only the local slice brief. Check that the slice preserves the overall scope and that the remaining integration path is explicit. Report slice acceptance separately from initiative acceptance.
 
 ### Step 2: Review the Tests First
 

@@ -40,6 +40,21 @@
         "Tasks are vertical slices rather than horizontal layers",
         "No implementation code is written during planning"
       ]
+    },
+    {
+      "id": 2,
+      "prompt": "Read initiative-brief.md and produce the planning artifacts for the approved notification rollout.",
+      "expected_output": "A master plan covering the complete rollout and all needed module plans, preserving the reference architecture and existing implementations. No implementation or capability trial.",
+      "files": [
+        "planning-and-task-breakdown"
+      ],
+      "expectations": [
+        "The required architecture reference is read and its existing adapter and event-identity decisions govern the plan",
+        "The master plan covers both assignment and overdue notification journeys through preferences, deduplication, delivery and status recording",
+        "All named modules are covered before execution, with dependencies and per-slice criteria linked to overall initiative acceptance",
+        "Existing assignment and provider behavior is reused rather than replaced by a new capability trial",
+        "There is one task-status owner, remaining integration is explicit, and no implementation code is written"
+      ]
     }
   ]
 }

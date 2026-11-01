@@ -79,7 +79,9 @@ Create a rules file that persists across sessions. This is the highest-leverage 
 
 ### Level 2: Specs and Architecture
 
-Load the relevant spec section when starting a feature. Don't load the entire spec if only one section applies.
+For an initiative, keep its overall outcome, acceptance criteria and master-plan pointer in context alongside the selected slice. Every instance specifying, planning, building or reviewing reads the named required architecture/design references: the common overview and the sections governing its assignment. Distinguish accepted decisions from proposed or historical material; a linked source is not evidence that its decisions were applied.
+
+Include those paths/sections and the slice's contribution to the overall goal in task briefs and handoffs. In the existing spec, plan or review output, briefly identify what was read and which decisions govern the work. Do not create a separate reading ledger or load unrelated material.
 
 **Effective:** "Here's the authentication section of our spec: [auth spec content]"
 

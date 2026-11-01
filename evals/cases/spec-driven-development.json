@@ -15,7 +15,7 @@
         "top_k": 3
       },
       {
-        "prompt": "This one requirement covers identity, billing, notifications, and reporting — decompose it into independently specifiable modules first",
+        "prompt": "This one requirement covers identity, billing, notifications, and reporting \u2014 decompose it into independently specifiable modules first",
         "top_k": 3
       },
       {
@@ -66,6 +66,21 @@
         "Approval of the map is requested before per-module specs are drafted",
         "Any module spec produced is scoped to a single module rather than restating the whole initiative",
         "No implementation code is written"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Read initiative-brief.md, notifications-spec.md and notifications-architecture.md. The preferences/dispatch/delivery module map in the brief is approved. Write the specifications for all three modules in this turn for later autonomous execution. Do not plan or implement yet.",
+      "expected_output": "An initiative contract and three focused module specs preserving the complete rollout goal and required architecture, ready for specification review.",
+      "files": [
+        "planning-and-task-breakdown"
+      ],
+      "expectations": [
+        "The required architecture source is read and its existing provider and event-identity decisions govern the specifications",
+        "All three requested module specifications are produced, rather than completing only the first module workflow",
+        "The initiative retains end-to-end assignment and overdue acceptance, and each module identifies its contribution",
+        "The existing implementation and evidence are reused with stated limits rather than another generic capability trial",
+        "No implementation code is written and no planning phase is started without its applicable approval"
       ]
     }
   ]
